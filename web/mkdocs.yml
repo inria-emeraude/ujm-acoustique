@@ -1,0 +1,17 @@
+site_name: JIMLAC 2025
+site_url: https://jimlac25.inria.fr/
+
+nav:
+    - Home: index.md
+    - Program: program.md
+    - JIM: jim.md
+    - LAC: lac.md
+    - Register: register.md
+    - Travel: travel.md
+
+site_dir: ../docs
+
+theme:
+    name: null
+    custom_dir: 'terminal'
+

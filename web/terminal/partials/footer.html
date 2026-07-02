@@ -1,0 +1,16 @@
+{% import 'macros/prev-next.j2' as prev_next_helper with context %}
+{%- set features = config.theme.features or [] -%}
+<footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+            {% if config.copyright %}
+            <p class="text-center text-muted">{{ config.copyright }}</p>
+            {% endif %} Site built with <a href="http://www.mkdocs.org">MkDocs</a> by <a href="https://team.inria.fr/emeraude/">the Inria Emeraude Team</a>.<br>JIMLAC 2025 is organized by <a href="https://inria.fr/">Inria</a>, <a href="https://grame.fr">GRAME-CNCM</a>, <a href="https://www.insa-lyon.fr/">INSA Lyon</a>, and  <a href="http://www.afim-asso.org/">AFIM</a>.
+        </div>
+        {%- if "footer.prev_next" in features and page and (page.next_page or page.previous_page) %}
+        <div id="terminal-mkdocs-footer-prev-next">
+            {{ prev_next_helper.make_prev_next() }}
+        </div>
+        {%- endif %}
+    </div>
+</footer>
