@@ -1,17 +1,41 @@
-site_name: JIMLAC 2025
-site_url: https://jimlac25.inria.fr/
-
+site_name: Acoustique @ UJM (L3 Musico)
+site_description: ECIU Micro-Module on Embedded Real-Time Audio
 nav:
-    - Home: index.md
-    - Program: program.md
-    - JIM: jim.md
-    - LAC: lac.md
-    - Register: register.md
-    - Travel: travel.md
+    - Cours:
+        - ' 1: Généralités ' : lectures/generalite.md
+    - Labs:
+        - ' 1: Généralités ' : lectures/generalite.md
+    - Code: "https://github.com/inria-emeraude/son"
+    
+theme: 
+  name: yeti
+  navigation_depth: 4
 
 site_dir: ../docs
+site_url: https://inria-emeraude.github.io/ujm-acoustique/
 
-theme:
-    name: null
-    custom_dir: 'terminal'
+extra:
+    social:
+        - type: github
+          link: https://inria-emeraude.github.io/ujm-acoustique/
+        - type: home
+          link: https://inria-emeraude.github.io/ujm-acoustique/
+        - type: envelope
+          link: mailto:romain.michon@univ-st-etienne.fr
 
+plugins:
+  - search
+
+extra_css: [extra.css]
+
+extra:
+  search:
+    language: fr
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+    - markdown_include.include:
+        base_path: './docs'

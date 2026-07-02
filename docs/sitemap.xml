@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://jimlac25.inria.fr/</loc>
+         <loc>https://inria-emeraude.github.io/ujm-acoustique/</loc>
          <lastmod>2026-07-02</lastmod>
     </url>
     <url>
-         <loc>https://jimlac25.inria.fr/jim/</loc>
-         <lastmod>2026-07-02</lastmod>
-    </url>
-    <url>
-         <loc>https://jimlac25.inria.fr/lac/</loc>
-         <lastmod>2026-07-02</lastmod>
-    </url>
-    <url>
-         <loc>https://jimlac25.inria.fr/program/</loc>
-         <lastmod>2026-07-02</lastmod>
-    </url>
-    <url>
-         <loc>https://jimlac25.inria.fr/register/</loc>
-         <lastmod>2026-07-02</lastmod>
-    </url>
-    <url>
-         <loc>https://jimlac25.inria.fr/travel/</loc>
+         <loc>https://inria-emeraude.github.io/ujm-acoustique/lectures/generalite/</loc>
          <lastmod>2026-07-02</lastmod>
     </url>
 </urlset>
