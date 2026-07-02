@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/theorie/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 1: Théorie du son  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1: Généralités </a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 1: Théorie du son </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1: Généralités </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../generalite/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../generalite/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#theorie-du-son" class="nav-link">Théorie du son</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#propagation-du-son" class="nav-link">Propagation du son</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reception-du-son" class="nav-link">Réception du son</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#classification-des-sons" class="nav-link">Classification des sons</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#sons-elementaires" class="nav-link">Sons élémentaires</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="4"><a href="#limpulsion" class="nav-link">L'impulsion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="4"><a href="#le-mouvement-harmonique-simple" class="nav-link">Le mouvement harmonique simple</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#sons-complexes" class="nav-link">Sons complexes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="4"><a href="#les-sons-harmoniques" class="nav-link">Les sons harmoniques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="4"><a href="#les-sons-inharmoniques" class="nav-link">Les sons inharmoniques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="4"><a href="#les-bruits" class="nav-link">Les bruits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="theorie-du-son">Théorie du son</h1>
+<h2 id="propagation-du-son">Propagation du son</h2>
+<p>La notion d'onde peut être définie comme une perturbation oscillatoire qui se propage à partir d'une source.</p>
+<p>C'est Robert Boyle (1627-1691) qui a admis le premier que <strong>l'air</strong> était un milieu de transmission du son, en observant les diminutions d'intensité d'un son émis dans une atmosphère progressivement raréfiée.</p>
+<p>La vitesse de propagation du son dans l'air est de 331 m/s (à une température de 0°C et à une pression de 760 mm de mercure).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Milieu de propagation</td>
+<td>Température</td>
+<td>Vitesse du son</td>
+</tr>
+<tr>
+<td>air</td>
+<td>0°C</td>
+<td>331 m/s</td>
+</tr>
+<tr>
+<td>air</td>
+<td>15°C</td>
+<td>340 m/s</td>
+</tr>
+<tr>
+<td>eau</td>
+<td>13°C</td>
+<td>1428 m/s</td>
+</tr>
+<tr>
+<td>fer</td>
+<td>20°C</td>
+<td>4887 m/s</td>
+</tr>
+<tr>
+<td>bois de sapin</td>
+<td>non spécifié</td>
+<td>6000 m/s</td>
+</tr>
+</tbody>
+</table>
+<p>La vitesse du son augmente avec la température pour atteindre 340 m/s à 20°C dans l'air (c'est généralement la valeur de référence utilisée quand on parle de vitesse du son dans l'air).</p>
+<h2 id="reception-du-son">Réception du son</h2>
+<p>Jusqu'à la fin du XIXe siècle, la plupart des recherches en acoustique étaient effectuées en utilisant l'oreille comme récepteur du son. En 1830, Félix Savart donna comme limites de l'audition humaine les valeurs de 8 vibrations par seconde vers le grave et de 24000 vibrations par seconde vers l'aigu. Actuellement on les situe respectivement à <strong>20 Hz et 20000 Hz</strong>.</p>
+<figure>
+<img src="freqs.png" class="mx-auto d-block" width="30%">
+
+<figcaption><center>Fréquences sonores perçues par différentes espèces.</center></figcaption>
+</figure>
+
+<p>Le seuil d'audibilité en intensité fut étudié par Toepler, Botzmann et J. William Strutt Rayleigh :</p>
+<figure>
+<img src="hearing-range.png" class="mx-auto d-block" width="60%">
+
+<figcaption><center>Seuil d'audibilité de l'oreille humaine.</center></figcaption>
+</figure>
+
+<p>En 1843, Georg S. Ohm indiqua que la qualité d'un son musical est due à la <strong>superposition de sons purs de différentes fréquences</strong> que l'oreille est capable de percevoir. Hermann von Helmholtz le suivit dans cette voie et donna la première théorie du fonctionnement de l'oreille, appelée « théorie de la résonance ».</p>
+<p>Les premières considérations concernant l'acoustique des salles intervinrent en 1853 lors de la parution des articles de J. B. Upham définissant les phénomènes de <strong>réverbération</strong> et de <strong>réflexion</strong> du son à la surface des parois d'une pièce. En 1856, Joseph Henry se mit à étudier l'acoustique des auditoriums. La fondation de l'acoustique architecturale est attribuée à C. Sabine en 1900.</p>
+<p>Parmi les tentatives d'amplification du son, on peut citer l'utilisation des trompes qui sont connues depuis l'antiquité . En 1650, Kircher proposa l'utilisation de trompes paraboliques pour l'aide à l'audition. René Laënnec inventa en 1819 le stéthoscope. Le terme « microphone » fut inventé par Charles Wheastone en 1827 pour désigner un instrument similaire au stéthoscope.</p>
+<p>Comme pour la plupart des phénomènes étudiés en physique, les chercheurs en acoustique ont tenté de mettre au point des techniques permettant de donner une représentation visuelle des phénomènes. En 1858, John LeConte observa les variations d'une flamme sous l'influence du son. John Tyndall développa le même principe pour l'observation des sons à hautes fréquences et de leur réflexion, réfraction et diffraction. Le microphone électrique supplanta ce système.   Divers dispositifs furent employés pour la visualisation des phénomènes sonores dont le « phonautographe » mis au point par Leon Scott. Cet instrument, précurseur du phonographe, permettait de <strong>tracer une courbe décrivant l'onde sonore à l'aide d'un stylet</strong>.</p>
+<p>La possibilité offerte par l’enregistrement du son a révolutionné les sciences du son avec l’apparition du phonographe d’Edison en 1875. Le son peut ainsi être fixé sur un support, il n’est plus un phénomène acoustique fugitif, il est reproductible à loisir. L’année suivante, c’est Bell qui invente le son électrique avec le téléphone en 1876 qui conduira au traitement du signal sonore et aux transmissions à distance.</p>
+<p>L'électronique a apporté de nouveaux instruments de mesure. Pour connaître <strong>les partiels</strong> présents dans un son, on peut capter ce son à l'aide d'un microphone puis analyser le signal électrique ainsi produit grâce à des filtres électroniques. <strong>L'analyseur de spectre est un appareil utilisant un ensemble de filtres</strong>. Il permet de visualiser sur un écran la courbe donnant les intensités d'un ensemble de fréquences. Cette courbe est appelée <strong>spectre de raies</strong>.</p>
+<h2 id="classification-des-sons">Classification des sons</h2>
+<p>Il existe différentes classifications des sons. Nous nous limiterons à la
+suivante, on peut classer les sons en deux catégories : les sons élémentaires
+et les sons complexes.</p>
+<h3 id="sons-elementaires">Sons élémentaires</h3>
+<h4 id="limpulsion">L'impulsion</h4>
+<!--**![](./Acoustique_files/clic.gif)**-->
+
+<p>L'impulsion est un son de durée infiniment courte (clic ou impulsion ou dirac) comme un clap de cinéma ou un coup de révolver ou, en numérique, la succession 0, 1, 0 ou 0, 1, -1, 0. Certains acousticiens prétendent que ce son contient toutes les fréquences mais nous dirons plus simplement qu'il n'en contient aucune.</p>
+<h4 id="le-mouvement-harmonique-simple">Le mouvement harmonique simple</h4>
+<!--[](videos/diapason2.mp4)-->
+
+<p>Le mouvement harmonique simple (aussi appelé "son pur") correspond à une onde sinusoïdale de fréquence fixe. Le son produit par un diapason est proche d'un mouvement harmonique simple.</p>
+<!--![](./Acoustique_files/sinus.gif)
+
+*Variations sinusoïdales de la pression de l’air causées
+par une vibration simple*
+-->
+
+<h3 id="sons-complexes">Sons complexes</h3>
+<p>Les sons complexes correspondent à tous les autres sons. Ce sont donc des sons formés de la juxtaposition de plusieurs vibrations élémentaires (les sons partiels). Nous pouvons distinguer trois catégories: les sons harmoniques, les sons inharmoniques et les bruits.</p>
+<h4 id="les-sons-harmoniques">Les sons harmoniques</h4>
+<p>Ce sont des sons dont les partiels sont tous multiples d’une même fréquence fondamentale. Ce sont des sons à hauteur déterminée. Ils résultent d’une onde périodique.</p>
+<!--[](videos/corde.mp4)
+
+*Vibration d’une corde pincée dans son mode de résonance fondamental*
+-->
+
+<!--
+*![](./Acoustique_files/mode2.gif)*
+
+*Vibration d’une corde pincée dans ses modes de résonance secondaires*
+-->
+
+<p>Des partiels dont les fréquences sont en rapports harmoniques fournissent un ensemble particulier d'intervalles par rapport à notre perception musicale</p>
+<!--
+[](videos/corde234.mp4)
+
+![](./Acoustique_files/harmonics.gif)
+
+*Partiels harmoniques d'une fondamentale de fréquence f = 65.4
+Hz (do-1) (en notation tempérée)*
+-->
+
+<h4 id="les-sons-inharmoniques">Les sons inharmoniques</h4>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+
+vol = hslider("volume [unit:dB]", -10, -96, 0, 0.1) : ba.db2linear : si.smoo;
+freq1 = hslider("freq1 [unit:Hz]", 1000, 20, 3000, 1);
+freq2 = hslider("freq2 [unit:Hz]", 200, 20, 3000, 1);
+
+process = vgroup("Oscillator", os.osc(freq1) * vol, os.osc(freq2) * vol);
+-->
+</faust-editor>
+</p>
+
+<p>Ce sont des sons dont les partiels (identifiables à l'analyse) ne sont pas multiples (par ex. les sons de cloches).</p>
+<h4 id="les-bruits">Les bruits</h4>
+<p>Ce sont les sons dont le nombre de partiels est trop important pour qu'on puisse les identifier à l'analyse (ex. une cymbale, une caisse claire avec timbre) ou qui varient trop vite dans le temps.</p>
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

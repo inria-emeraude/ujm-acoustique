@@ -3,6 +3,7 @@ site_description: ECIU Micro-Module on Embedded Real-Time Audio
 nav:
     - Cours:
         - ' 1: Généralités ' : lectures/generalite.md
+        - ' 1: Théorie du son ' : lectures/theorie.md
     - Labs:
         - ' 1: Généralités ' : lectures/generalite.md
     - Code: "https://github.com/inria-emeraude/son"
