@@ -1,5 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script>
-
 # Théorie du son
 
 ## Propagation du son
@@ -157,3 +155,5 @@ process = no.noise;
 -->
 </faust-editor>
 </p>
+
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script>
