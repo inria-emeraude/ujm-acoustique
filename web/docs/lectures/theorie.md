@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script>
+
 # Théorie du son
 
 ## Propagation du son
@@ -26,7 +28,7 @@ Jusqu'à la fin du XIXe siècle, la plupart des recherches en acoustique étaien
 <figure>
 <img src="freqs.png" class="mx-auto d-block" width="30%">
 
-<figcaption><center>Fréquences sonores perçues par différentes espèces.</center></figcaption>
+<figcaption><center><i>Fréquences sonores perçues par différentes espèces.</i></center></figcaption>
 </figure>
 
 Le seuil d'audibilité en intensité fut étudié par Toepler, Botzmann et J. William Strutt Rayleigh :
@@ -34,7 +36,7 @@ Le seuil d'audibilité en intensité fut étudié par Toepler, Botzmann et J. Wi
 <figure>
 <img src="hearing-range.png" class="mx-auto d-block" width="60%">
 
-<figcaption><center>Seuil d'audibilité de l'oreille humaine.</center></figcaption>
+<figcaption><center><i>Seuil d'audibilité de l'oreille humaine.</i></center></figcaption>
 </figure>
 
 En 1843, Georg S. Ohm indiqua que la qualité d'un son musical est due à la **superposition de sons purs de différentes fréquences** que l'oreille est capable de percevoir. Hermann von Helmholtz le suivit dans cette voie et donna la première théorie du fonctionnement de l'oreille, appelée « théorie de la résonance ».
@@ -67,7 +69,6 @@ Le programme Faust suivant produit une impulsion une fois par seconde (à une p�
 <faust-editor>
 <!--
 import("stdfaust.lib");
-
 p = ma.SR;
 process = ba.pulse(p);
 -->
@@ -84,11 +85,8 @@ Le programme Faust suivant produit une sinusoïde à 440 Hz ce qui correspond un
 <faust-editor>
 <!--
 import("stdfaust.lib");
-
-fundamental = hslider("fundamental",300,50,2000,1);
-nHarmonics = 5;
-
-process = sum(i,nHarmonics,os.osc(fundamental*(i+1)))/nHarmonics;
+f = 440;
+process = os.osc(f);
 -->
 </faust-editor>
 </p>
@@ -101,46 +99,61 @@ Les sons complexes correspondent à tous les autres sons. Ce sont donc des sons 
 
 Ce sont des sons dont les partiels sont tous multiples d’une même fréquence fondamentale. Ce sont des sons à hauteur déterminée. Ils résultent d’une onde périodique.
 
-
-
-<!--[](videos/corde.mp4)
-
-*Vibration d’une corde pincée dans son mode de résonance fondamental*
--->
-
-<!--
-*![](./Acoustique_files/mode2.gif)*
-
-*Vibration d’une corde pincée dans ses modes de résonance secondaires*
--->
-
 Des partiels dont les fréquences sont en rapports harmoniques fournissent un ensemble particulier d'intervalles par rapport à notre perception musicale
 
-<!--
-[](videos/corde234.mp4)
+<figure>
+<img src="harmonics.gif" class="mx-auto d-block" width="60%">
 
-![](./Acoustique_files/harmonics.gif)
+<figcaption><center><i>Partiels harmoniques d'une fondamentale de fréquence f = 65.4 Hz (do-1) (en notation tempérée).</i></center></figcaption>
+</figure>
 
-*Partiels harmoniques d'une fondamentale de fréquence f = 65.4
-Hz (do-1) (en notation tempérée)*
--->
-
-#### Les sons inharmoniques
+Le programme Faust suivant implémente une suite harmonique constituée de sinusoïdes dont les fréquences sont toutes des multiples de la fondamentale :
 
 <p>
 <faust-editor>
 <!--
 import("stdfaust.lib");
-
-process = os.osc(440);
+fundamental = hslider("fundamental",300,50,2000,1);
+nHarmonics = 5;
+process = sum(i,nHarmonics,os.osc(fundamental*(i+1)))/nHarmonics;
 -->
 </faust-editor>
 </p>
 
+<figure>
+<img src="mode2.gif" class="mx-auto d-block" width="60%">
+
+<figcaption><center><i>Vibration d’une corde pincée dans ses modes de résonance secondaires.</i></center></figcaption>
+</figure>
+
+#### Les sons inharmoniques
+
 Ce sont des sons dont les partiels (identifiables à l'analyse) ne sont pas multiples (par ex. les sons de cloches).
+
+Le programme Faust suivant produit un son inharmonique en ajoutant plusieurs sinusoïdes entre-elles dont les fréquences ne sont pas des multiples de la fondamentale :
+
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+fundamental = hslider("fundamental",300,50,2000,1);
+nHarmonics = 5;
+process = sum(i,nHarmonics,os.osc(fundamental+(i*53)))/nHarmonics;
+-->
+</faust-editor>
+</p>
 
 #### Les bruits
 
 Ce sont les sons dont le nombre de partiels est trop important pour qu'on puisse les identifier à l'analyse (ex. une cymbale, une caisse claire avec timbre) ou qui varient trop vite dans le temps.
 
-<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script>
+Le programme Faust suivant produit du bruit blanc (un bruit dont la quantité d'énergie est la même sur l'ensemble du spectre) :
+
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+process = no.noise;
+-->
+</faust-editor>
+</p>
