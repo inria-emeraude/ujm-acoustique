@@ -59,21 +59,39 @@ et les sons complexes.
 
 #### L'impulsion
 
-<!--**![](./Acoustique_files/clic.gif)**-->
-
 L'impulsion est un son de durée infiniment courte (clic ou impulsion ou dirac) comme un clap de cinéma ou un coup de révolver ou, en numérique, la succession 0, 1, 0 ou 0, 1, -1, 0. Certains acousticiens prétendent que ce son contient toutes les fréquences mais nous dirons plus simplement qu'il n'en contient aucune.
+
+Le programme Faust suivant produit une impulsion une fois par seconde (à une période *p* correspondant au taux d'échantillonnage `ma.SR`) : 
+
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+
+p = ma.SR;
+process = ba.pulse(p);
+-->
+</faust-editor>
+</p>
 
 #### Le mouvement harmonique simple
 
-<!--[](videos/diapason2.mp4)-->
-
 Le mouvement harmonique simple (aussi appelé "son pur") correspond à une onde sinusoïdale de fréquence fixe. Le son produit par un diapason est proche d'un mouvement harmonique simple.
 
-<!--![](./Acoustique_files/sinus.gif)
+Le programme Faust suivant produit une sinusoïde à 440 Hz ce qui correspond un à LA3 :
 
-*Variations sinusoïdales de la pression de l’air causées
-par une vibration simple*
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+
+fundamental = hslider("fundamental",300,50,2000,1);
+nHarmonics = 5;
+
+process = sum(i,nHarmonics,os.osc(fundamental*(i+1)))/nHarmonics;
 -->
+</faust-editor>
+</p>
 
 ### Sons complexes
 
@@ -82,6 +100,8 @@ Les sons complexes correspondent à tous les autres sons. Ce sont donc des sons 
 #### Les sons harmoniques
 
 Ce sont des sons dont les partiels sont tous multiples d’une même fréquence fondamentale. Ce sont des sons à hauteur déterminée. Ils résultent d’une onde périodique.
+
+
 
 <!--[](videos/corde.mp4)
 
