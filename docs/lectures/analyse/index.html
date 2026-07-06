@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/analyse/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 3: Analyse du son  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1: Généralités </a>
+</li>
+                                    
+<li>
+    <a href="../theorie/" class="dropdown-item"> 2: Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 3: Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 4: Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../instrum-archi/" class="dropdown-item"> 5: Acoustique instrumentale et architecturale </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1: Généralités </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../theorie/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../numerique/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#analyse-du-son" class="nav-link">Analyse du son</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#etude-du-signal" class="nav-link">Étude du signal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#analyse-fft-fast-fourier-transform" class="nav-link">Analyse FFT (Fast Fourier Transform)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#le-sonagramme" class="nav-link">Le sonagramme</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lanalyse-harmonique" class="nav-link">L'analyse harmonique</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quelques-definitions" class="nav-link">Quelques Définitions</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#une-raie" class="nav-link">Une raie</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#un-pic" class="nav-link">Un pic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#un-partiel" class="nav-link">Un partiel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#un-harmonique" class="nav-link">Un harmonique</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#la-frequence-fondamentale-le-fondamental" class="nav-link">La fréquence fondamentale / le fondamental</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#un-formant" class="nav-link">Un formant</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#les-analyses-spectrales-et-leurs-derivee" class="nav-link">Les analyses spectrales et leurs dérivée</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#recherche-de-pics" class="nav-link">Recherche de pics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#recherche-de-fondamentale" class="nav-link">Recherche de fondamentale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#recherche-de-formants" class="nav-link">Recherche de formants</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="analyse-du-son">Analyse du son</h1>
+<p>Un des apports de l’informatique réside dans les possibilités offertes dans le domaine de l’analyse du son ou plus généralement du traitement du signal. L’ordinateur est remarquable à la fois par la diversité et par la précision des analyses qu’il permet de réaliser et pour les possibilités qu’il offre de réutiliser les données fournies par l’analyse afin d’établir des modèles ou des règles de synthèse.</p>
+<h2 id="etude-du-signal">Étude du signal</h2>
+<p>Le son est difficile à comprendre par la simple visualisation de sa forme d'onde :</p>
+<figure>
+<img src="ondecello1.gif" class="mx-auto d-block" width="30%">
+<figcaption><center><i>Forme d'onde d'un son d'archet de violoncelle.</i></center></figcaption>
+</figure>
+
+<p>À l'échelle de la seconde, on peut observer l'enveloppe d'amplitude du son qui décrit les variations de l’amplitude de ce son :</p>
+<figure>
+<img src="gongenv.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Suivi de l'envelope d'un son de gong.</i></center></figcaption>
+</figure>
+
+<p>Pour comprendre de quoi est fait le timbre d'un son, des analyses sont nécessaires.</p>
+<h2 id="analyse-fft-fast-fourier-transform">Analyse FFT (<em>Fast Fourier Transform</em>)</h2>
+<p>Au début du XIXe siècle, Joseph Fourier découvrit qu'il est possible sous certaines conditions de décrire une fonction arbitraire comme la somme de fonctions trigonométriques. Cela aboutit à la formulation du principe de la transformée de Fourier : une fonction étudiée sur une fenêtre temporelle de durée T peut être transformée en une série de fonctions sinusoïdales de fréquences <em>f</em>, <em>2f</em>, <em>3f</em>, <em>4f</em> etc., avec <em>f=1/T</em>. Le calcul permet de leur associer deux valeurs : une amplitude et une phase.</p>
+<p>C'est Ohm qui, en 1843, proposa d'appliquer la théorie de Fourier au signal sonore. Il est le premier scientifique à avoir indiqué que tout son harmonique peut se décomposer en une somme de sons purs de fréquences multiples de la fondamentale.</p>
+<p>Les transformées de Fourier produisent un spectre de raies et fournissent un ensemble de coefficients d'amplitude et de phase pour chaque bande de fréquence. Elles sont au son ce que le prisme est à la lumière. En additionnant un ensemble de signaux sinusoïdaux (sons purs) dont les fréquences, amplitudes et phases correspondent aux valeurs de chaque raie du spectre, il est possible de reconstituer à l'identique le son original.</p>
+<p>Les transformées de Fourier sont le point de départ de la plupart des techniques actuelles d'analyse et de transformation des sons. Elles permettent
+en particulier d'établir une correspondance entre le <strong>domaine temporel</strong>, relatif aux formes d’onde du signal et aux valeurs d'amplitude des échantillons, et le <strong>domaine fréquentiel</strong>, relatif aux amplitudes et phases des différentes fréquences partielles d'un son. Cette correspondance est essentielle car l'oreille humaine entend les sons dans le domaine fréquentiel alors que ceux-ci sont stockés en mémoire sur l'ordinateur dans le domaine temporel.</p>
+<figure>
+<img src="spectrediapason.jpg" class="mx-auto d-block" width="60%">
+</figure>
+
+<p>Exemple d'analyse FFT d'un son  (fenêtre = 4096 échantillons) :</p>
+<table>
+<thead>
+<tr>
+<th>amplitude (dB)</th>
+<th>fréquence (Hz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.063677</td>
+<td>0.500000</td>
+</tr>
+<tr>
+<td>3.260336</td>
+<td>10.749255</td>
+</tr>
+<tr>
+<td>0.500633</td>
+<td>21.393793</td>
+</tr>
+<tr>
+<td>1.384061</td>
+<td>32.720139</td>
+</tr>
+<tr>
+<td>0.813664</td>
+<td>42.989300</td>
+</tr>
+<tr>
+<td>0.686892</td>
+<td>54.245686</td>
+</tr>
+<tr>
+<td>5.088099</td>
+<td>64.595543</td>
+</tr>
+<tr>
+<td>6.863124</td>
+<td>74.869057</td>
+</tr>
+<tr>
+<td>2.979800</td>
+<td>86.151726</td>
+</tr>
+<tr>
+<td>4.941318</td>
+<td>96.426743</td>
+</tr>
+<tr>
+<td>5.947023</td>
+<td>107.684196</td>
+</tr>
+</tbody>
+</table>
+<p>Le paramètre principal de la FFT est la taille de la fenêtre d'analyse qui détermine la résolution en fréquence de la FFT. Si la taille de la fenêtre est de 1 seconde, la FFT peut déceler des fréquence descendant jusqu'à 1 Hz. Elle donne donc les amplitudes des fréquences de 1 Hz à 22 kHz à un intervalle de 1 Hz. Si la taille de la fenêtre est de 0.1 seconde, la résolution en fréquence est de 10 Hz. Avec la FFT, les tailles de fenêtre (exprimées en nombre d’échantillons) doivent être multiples de 2.</p>
+<p>Souvent, l'analyse d'une fenêtre ne suffit pas à donner une représentation significative du son. Les sons musicaux ne sont jamais stables et il est donc nécessaire de réaliser des analyses répétées dans le son pour en étudier les variations dans le temps (FFT à fenêtre glissante). Plus la fenêtre d'analyse est grande, plus il est difficile de repérer les modifications d'amplitudes du son ou de ses partiels. Plus la fenêtre d'analyse est petite, plus la résolution en fréquence de l'analyse diminue, ce qui, en contrepartie, ne permet plus de déceler les fréquences graves.</p>
+<figure>
+<img src="fftfenetre.gif" class="mx-auto d-block" width="50%">
+<figcaption><center><i>FFT fenêtrée.</i></center></figcaption>
+</figure>
+
+<p>La FFT fournit tellement de paramètres qu'il est difficile de les interpréter directement. Plusieurs techniques permettent la compréhension des données fournies par la FFT.</p>
+<h2 id="le-sonagramme">Le sonagramme</h2>
+<p>Le sonagramme (ou spectrogramme) est une représentation graphique de la FFT en trois dimensions : temps, fréquence, amplitude.</p>
+<figure>
+<img src="sonags.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Différents sonagrammes.</i></center></figcaption>
+</figure>
+
+<video width="100%" controls="controls">
+  <source src="ramausonag.mp4" type="video/mp4">
+</video>
+
+<h2 id="lanalyse-harmonique">L'analyse harmonique</h2>
+<p>Pour des sons à hauteur déterminée, il est possible de réduire les données de la FFT en ne gardant que les partiels harmoniques, c'est-à-dire multiples
+de la fréquence fondamentale du son.</p>
+<p>Analyse harmonique d'un son de hautbois (La4) :</p>
+<table>
+<thead>
+<tr>
+<th>N°</th>
+<th>fréquence</th>
+<th>amplitude</th>
+<th>phase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>440.000</td>
+<td>.092262</td>
+<td>90.00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>880.000</td>
+<td>.035750</td>
+<td>-72.92</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1320.000</td>
+<td>.072624</td>
+<td>136.50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1760.000</td>
+<td>.211091</td>
+<td>147.29</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2200.000</td>
+<td>.031571</td>
+<td>124.46</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2640.000</td>
+<td>.001626</td>
+<td>-2.63</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3080.000</td>
+<td>.008008</td>
+<td>-84.06</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3520.000</td>
+<td>.007518</td>
+<td>-39.21</td>
+</tr>
+<tr>
+<td>9</td>
+<td>3960.000</td>
+<td>.003057</td>
+<td>40.62</td>
+</tr>
+<tr>
+<td>10</td>
+<td>4400.000</td>
+<td>.000691</td>
+<td>-172.76</td>
+</tr>
+<tr>
+<td>11</td>
+<td>4840.000</td>
+<td>.000792</td>
+<td>-22.44</td>
+</tr>
+<tr>
+<td>12</td>
+<td>5280.000</td>
+<td>.000524</td>
+<td>50.75</td>
+</tr>
+<tr>
+<td>13</td>
+<td>5720.000</td>
+<td>.000296</td>
+<td>31.47</td>
+</tr>
+<tr>
+<td>14</td>
+<td>6160.000</td>
+<td>.000537</td>
+<td>-136.23</td>
+</tr>
+<tr>
+<td>15</td>
+<td>6600.000</td>
+<td>.000144</td>
+<td>-155.12</td>
+</tr>
+</tbody>
+</table>
+<p>Dans les exemples ci-dessous, certaines caractéristiques des sons peuvent être mises en évidence. Le hautbois comporte des pics de fréquences qui vont bien au-delà de sa fréquence fondamentale. On observe en particulier un formant placé vers 1700 Hz.</p>
+<p>La clarinette présente des amplitudes plus élevées pour ses harmoniques pairs que pour ses harmoniques impairs. Enfin, pour la flûte, l'amplitude des différents harmoniques diminue très vite avec la fréquence.</p>
+<p>Pour les amplitudes, deux systèmes d'unités sont adoptés : l'amplitude sur une échelle linéaire qui est proportionnelle à la mesure de la pression acoustique lors de la prise de son et l'amplitude logarithmique, exprimée en dB, qui témoigne d'une meilleure façon de la perception des intensités par l'oreille humaine.</p>
+<figure>
+<img src="spectres.gif" class="mx-auto d-block" width="90%">
+</figure>
+
+<h2 id="quelques-definitions">Quelques Définitions</h2>
+<h3 id="une-raie">Une raie</h3>
+<p>Le <strong>spectre de fréquences d'un signal</strong> (un son) calculé par une transformée de Fourier (FFT) sur une fenêtre du signal (de taille généralement égale à 4096 échantillons, donc proche d'un dixième de seconde) est un <strong>spectre de raies</strong>. Ce spectre donne un tableau dont chaque ligne est une <strong>raie</strong> et correspond à une fréquence donnée, à laquelle sont associées une amplitude et une phase.</p>
+<h3 id="un-pic">Un pic</h3>
+<p>Un pic est une raie d'un spectre de fréquences dont l'amplitude est supérieure à celles de ses voisines.</p>
+<p>La valeur peut être (1) celle de la raie considérée ou (2) une estimation de la valeur de la fréquence du pic par approximation de la courbe idéale qui passerait par les valeurs des raies voisines.</p>
+<p><strong>Exemple d'une FFT sur un son de diapason (zoom) :</strong></p>
+<figure>
+<img src="raies.png" class="mx-auto d-block" width="50%">
+</figure>
+
+<p>(1) valeur de la raie la plus forte : 441,4Hz.</p>
+<figure>
+<img src="pic_estimation.png" class="mx-auto d-block" width="50%">
+</figure>
+
+<p>(2) valeur estimée du pic : 440 Hz.</p>
+<h3 id="un-partiel">Un partiel</h3>
+<p>Un partiel est une composante fréquentielle continue qu'on peut observer dans un sonagramme. Il correspond à une succession de pics à des fréquences très proches qui apparaissent dans les analyses spectrales successives qui constituent le sonagramme.</p>
+<h3 id="un-harmonique">Un harmonique</h3>
+<p>Un harmonique est un pic (dans un spectre) ou un partiel (dans un sonogramme) dont la fréquence est multiple de la fréquence fondamentale (dans le cas d'un son harmonique, donc dont la hauteur est clairement identifiable à l'audition).</p>
+<h3 id="la-frequence-fondamentale-le-fondamental">La fréquence fondamentale / le fondamental</h3>
+<p>Le fondamental d'un son est une valeur théorique (F0 exprimée en Hz) dont les principaux pics (dans un spectre) ou partiels (dans un sonogramme) du son ont leurs fréquences qui sont des multiples de cette valeur.</p>
+<p>Le fondamental correspond à la fréquence qui est perçue à l'audition comme étant la hauteur du son.</p>
+<p>Le fondamental correspond souvent au premier harmonique du son (F0 x 1). C'est souvent le partiel le plus fort du son, mais pas nécessairement, il peut être totalement absent des représentations spectrales.</p>
+<h3 id="un-formant">Un formant</h3>
+<p>Un formant est une bande de fréquence dans laquelle il y a plus d'énergie qu'ailleurs.</p>
+<p>Un formant peut être caractérisé par sa fréquence centrale (en Hz), sa largeur de bande (en Hz) et son amplitude.</p>
+<h2 id="les-analyses-spectrales-et-leurs-derivee">Les analyses spectrales et leurs dérivée</h2>
+<p>L'analyse FFT produit des quantités de données considérables, d'autant que pour pouvoir suivre l'évolution du son dans le temps, il faut répéter les analyses à intervalles de temps très rapprochés (FFT à fenêtre glissante).</p>
+<p>Il est donc souvent nécessaire de condenser l'information, de ne garder que ce qui est pertinent pour ce qu'on veut en faire.</p>
+<h3 id="recherche-de-pics">Recherche de pics</h3>
+<p>La première simplification des données est le recherche de pics qui consiste à ne garder de la FFT que les valeurs qui dépassent de façon significative leurs voisines. Sur un son harmonique instrumental par exemple, le recherche de pics permet de faire apparaître les harmoniques, en réduisant les informations de 2000 fréquences détectées dans la FFT à moins d'une centaine de pics.</p>
+<h3 id="recherche-de-fondamentale">Recherche de fondamentale</h3>
+<p>Lorsqu'on a effectué une recherche de pics sur la FFT d'un son, il est possible d'essayer de repérer une certaine régularité dans leur répartition. La recherche de fondamentale permet de trouver la fréquence dont le plus grand nombre possible de pics seraient les harmoniques. Cette technique est principalement appliquée à des sons monodiques.</p>
+<p>Dans beaucoup de cas, la FFT ne permet pas de donner une valeur assez précise pour la fondamentale dans la mesure où sa précision est limitée par le nombre de raies considérées. D'autres techniques peuvent être utilisées dans ce cas tel que l'algorithme de Yin (<a href="https://hyuncat.com/blog/yin/">https://hyuncat.com/blog/yin/</a>).</p>
+<h3 id="recherche-de-formants">Recherche de formants</h3>
+<p>La recherche de formants sert à mettre en évidence des bandes de fréquence dans lesquelles il y a plus d'énergie qu'ailleurs. Un formant est caractérisé par sa fréquence centrale (en Hz), sa largeur de bande (en Hz) et son amplitude. Les formants peuvent être obtenus à partir d'analyse FFT mais aussi à partir d'un autre type d'analyse : la LPC (Linear Predictive Coding).</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

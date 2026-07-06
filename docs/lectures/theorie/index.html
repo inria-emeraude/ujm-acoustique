@@ -8,7 +8,7 @@
         
         <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/theorie/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title> 1: Théorie du son  - Acoustique @ UJM (L3 Musico)</title>
+        <title> 2: Théorie du son  - Acoustique @ UJM (L3 Musico)</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -44,7 +44,19 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page"> 1: Théorie du son </a>
+    <a href="./" class="dropdown-item active" aria-current="page"> 2: Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="../analyse/" class="dropdown-item"> 3: Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 4: Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../instrum-archi/" class="dropdown-item"> 5: Acoustique instrumentale et architecturale </a>
 </li>
                                 </ul>
                             </li>
@@ -74,7 +86,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../generalite/" class="nav-link">
+                                <a rel="next" href="../analyse/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -110,30 +122,54 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="3"><a href="#sons-elementaires" class="nav-link">Sons élémentaires</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="4"><a href="#limpulsion" class="nav-link">L'impulsion</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="4"><a href="#le-mouvement-harmonique-simple" class="nav-link">Le mouvement harmonique simple</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
             <li class="nav-item" data-bs-level="3"><a href="#sons-complexes" class="nav-link">Sons complexes</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="4"><a href="#les-sons-harmoniques" class="nav-link">Les sons harmoniques</a>
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#les-parametres-du-son" class="nav-link">Les paramètres du son</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#la-forme-donde" class="nav-link">La forme d'onde</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="4"><a href="#les-sons-inharmoniques" class="nav-link">Les sons inharmoniques</a>
+            <li class="nav-item" data-bs-level="3"><a href="#la-hauteur" class="nav-link">La hauteur</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="4"><a href="#les-bruits" class="nav-link">Les bruits</a>
+            <li class="nav-item" data-bs-level="3"><a href="#lamplitude" class="nav-link">L'amplitude</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="3"><a href="#lenveloppe-damplitude" class="nav-link">L'enveloppe d'amplitude</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#les-transitoires" class="nav-link">Les transitoires</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#le-spectre" class="nav-link">Le spectre</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#etude-dun-son-de-guitare" class="nav-link">Étude d'un son de guitare</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#les-echelles-musicales" class="nav-link">Les échelles musicales</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#le-temperament-egal" class="nav-link">Le tempérament égal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#les-autres-temperaments" class="nav-link">Les autres tempéraments</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
@@ -196,14 +232,12 @@
 <p>Jusqu'à la fin du XIXe siècle, la plupart des recherches en acoustique étaient effectuées en utilisant l'oreille comme récepteur du son. En 1830, Félix Savart donna comme limites de l'audition humaine les valeurs de 8 vibrations par seconde vers le grave et de 24000 vibrations par seconde vers l'aigu. Actuellement on les situe respectivement à <strong>20 Hz et 20000 Hz</strong>.</p>
 <figure>
 <img src="freqs.png" class="mx-auto d-block" width="30%">
-
 <figcaption><center><i>Fréquences sonores perçues par différentes espèces.</i></center></figcaption>
 </figure>
 
 <p>Le seuil d'audibilité en intensité fut étudié par Toepler, Botzmann et J. William Strutt Rayleigh :</p>
 <figure>
 <img src="hearing-range.png" class="mx-auto d-block" width="60%">
-
 <figcaption><center><i>Seuil d'audibilité de l'oreille humaine.</i></center></figcaption>
 </figure>
 
@@ -251,7 +285,6 @@ process = os.osc(f);
 <p>Des partiels dont les fréquences sont en rapports harmoniques fournissent un ensemble particulier d'intervalles par rapport à notre perception musicale</p>
 <figure>
 <img src="harmonics.gif" class="mx-auto d-block" width="60%">
-
 <figcaption><center><i>Partiels harmoniques d'une fondamentale de fréquence f = 65.4 Hz (do-1) (en notation tempérée).</i></center></figcaption>
 </figure>
 
@@ -269,7 +302,6 @@ process = sum(i,nHarmonics,os.osc(fundamental*(i+1)))/nHarmonics;
 
 <figure>
 <img src="mode2.gif" class="mx-auto d-block" width="60%">
-
 <figcaption><center><i>Vibration d’une corde pincée dans ses modes de résonance secondaires.</i></center></figcaption>
 </figure>
 
@@ -298,6 +330,311 @@ process = no.noise;
 -->
 </faust-editor>
 </p>
+
+<p>Certains bruits ont un spectre non neutre, c'est le cas par exemple du « bruit rose » qui a un spectre plus « coloré » que celui du bruit blanc :</p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+process = no.pink_noise;
+-->
+</faust-editor>
+</p>
+
+<h2 id="les-parametres-du-son">Les paramètres du son</h2>
+<h3 id="la-forme-donde">La forme d'onde</h3>
+<p>On peut l'observer avec une représentation "Pression/temps" à l'échelle de la milliseconde environ, qui permet d'observer les variations de l'amplitude du son au cours du temps.</p>
+<figure>
+<img src="guitWav.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Forme d'onde d'un signal audio.</i></center></figcaption>
+</figure>
+
+<h3 id="la-hauteur">La hauteur</h3>
+<p>L'observation de la forme d'onde permet de repérer la période du son (pour les sons harmoniques).</p>
+<h4 id="la-periodicite-de-la-vibration">La périodicité de la vibration</h4>
+<p>La <strong>période</strong> T exprimée en seconde est l'inverse de la <strong>fréquence</strong> de la vibration : f = 1/T</p>
+<p>La <strong>longueur d'onde</strong> (en mètres) lambda = c x T = c / f (c étant la célérité ou vitesse du son = 340 m/s)</p>
+<figure>
+<img src="periode.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Exemple de mesure de période : La période T = 2.27 ms ; La longueur d'onde : lambda = 340 x 0.00227 ; lambda = 0,77 m ; La fréquence : f = 1 / 0,00227 = 440 Hz.</i></center></figcaption>
+</figure>
+
+<h4 id="la-hauteur-percue">La hauteur perçue</h4>
+<p>Pour un son pur, la hauteur est liée à la fréquence de la vibration (ex : La3 : 440 Hz, f/mc).</p>
+<!-- TODO: il manque potentiellement le tableau suivant ici : https://mood.univ-st-etienne.fr/pluginfile.php/466605/mod_resource/content/7/midifreq.html -->
+
+<p>Pour un son harmonique, la hauteur est liée aux rapports de fréquences entre les partiels et non à la fréquence la plus basse. La fondamentale peut être absente sans qu'on perde la notion de hauteur.</p>
+<p>Le programme Faust suivant permet d'activer ou non la fondamentale d'un son harmonique :</p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+fundamental = hslider("fundamental",300,50,2000,1);
+fundamentalOn = checkbox("fundamental-on"); 
+nHarmonics = 5;
+process = (os.osc(fundamental)*fundamentalOn + 
+    sum(i,nHarmonics,os.osc(fundamental*(i+2))))/nHarmonics;
+-->
+</faust-editor>
+</p>
+
+<h4 id="grave-ou-aigu">Grave ou aigu</h4>
+<p>Indépendamment de la hauteur du son, le timbre peut être grave ou aigu. Cette notion est liée à la répartition de l'énergie dans le spectre (vers les aigus ou vers les graves).</p>
+<!-- TODO: on pourrait avoir un programme Faust ici -->
+
+<h3 id="lamplitude">L'amplitude</h3>
+<p>On dispose de plusieurs grandeurs : la pression sonore (N/m2), l'intensité (l'énergie, proportionnelle au carré de la pression, en W/m2) et la puissance acoustique (Watt).</p>
+<p>L'oreille peut détecter des sons correspondant à des variations de la pression de l'air inférieures à un milliardième de fois la pression atmosphérique. Elle peut supporter jusqu'à un millième de fois la pression atmosphérique (soit un million de fois plus). Les écarts de pressions entre un son fort et un son faible sont donc énormes et cette échelle ne correspond pas à la perception que l'on a du volume sonore (ou niveau sonore). Des tests d'écoute montrent que la sensation subjective de niveau sonore <em>Lp (Loudness)</em> est reliée au logarithme de la pression <em>P</em> (ou de l'intensité).</p>
+<p>Lp = 20.log 10 ( P/P 0 ) (avec P : pression efficace et P 0 : pression de référence à 0dB).</p>
+<p>La pression efficace  (<em>root-mean square</em>) est égale à la racine carrée de la valeur moyenne du carré de la pression.</p>
+<p>Le niveau de pression sonore (SPL : <em>Sound Pressure Level</em>) est donc exprimé en décibel (dB), une échelle logarithmique :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pression (N/m2)</td>
+<td>0.00002</td>
+<td>0.0002</td>
+<td>0.002</td>
+<td>0.02</td>
+<td>0.2</td>
+<td>2</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Niveau (dB)</td>
+<td>0</td>
+<td>20</td>
+<td>40</td>
+<td>60</td>
+<td>80</td>
+<td>100</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="seuils.gif" class="mx-auto d-block" width="100%"><br>
+<img src="niveaux.png" class="mx-auto d-block" width="70%">
+<figcaption><center><i>Différents niveaux sonores pour différents scénarios.</i></center></figcaption>
+</figure>
+
+<p>Lorsque la pression sonore est multipliée par 2, la sensation augmente d'une valeur constante : le niveau gagne +6dB.</p>
+<p>Lorsque deux sources d'égale puissance jouent ensemble, la pression n'est pas multipliée par 2. Le niveau gagne seulement +3dB. Pour doubler la pression et avoir un niveau de +6dB, il faut quatre sources (quatre violons jouent deux fois plus fort qu'un seul violon). Toutefois pour avoir une sensation de volume sonore deux fois plus fort, il faut augmenter le niveau de +10dB.</p>
+<p>Enfin, la <strong>sensation de volume sonore</strong> (<em>loudness</em> en anglais) dépend également de la fréquence du son. Cette sensation est beaucoup moins importante, à pression égale, pour des sons graves (&lt; 200 Hz) que pour des sons entre 300 et 7000 Hz (zone correspondant à la parole) : voir la section "<a href="#reception-du-son">Réception du son</a>"</p>
+<p>Quand on s'éloigne de la source sonore, si on double la distance, le niveau sonore perd 6dB.</p>
+<h3 id="lenveloppe-damplitude">L'enveloppe d'amplitude</h3>
+<p>Elle indique les variation de l'amplitude du son en fonction du temps. Elle comporte souvent plusieurs phases : l'attaque, une première décroissance (<em>decay</em>), le maintien (<em>sustain</em>), qui correspond à l'entretien du son, et la chute (<em>release</em>), lorsque le son n'est plus entretenu.</p>
+<figure>
+<img src="enveloppe.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Suivi de l'enveloppe d'un son de violoncelle.</i></center></figcaption>
+</figure>
+
+<p>Le programme Faust suivant implémente un synthétiseur basé sur une onde en dent de scie contrôle par une envelope ADSR :</p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+attack = 0.01; // in ms
+decay = 0.01;
+sustain = 0.8; // 0-1 ratio
+release = 0.1;
+envelope = button("gate") : en.adsr(attack,decay,sustain,release);
+process = os.sawtooth(440)*envelope : fi.lowpass(3,envelope*10000+500);
+-->
+</faust-editor>
+</p>
+
+<h3 id="les-transitoires">Les transitoires</h3>
+<p>Ils correspondent à des états non stationnaires d'un son (par exemple l'attaque d'un son). Ils jouent un rôle très important dans la reconnaissance des instruments.</p>
+<h3 id="le-spectre">Le spectre</h3>
+<p>C'est un graphique  qui représente la répartition de l'énergie du son selon les fréquences. Il est obtenu après l'analyse (FFT) d'un son à un instant donné, sur une certaine durée (fenêtre). Il permet de mettre en évidence les partiels du son.</p>
+<h3 id="etude-dun-son-de-guitare">Étude d'un son de guitare</h3>
+<p>Son de guitare, note La3 :</p>
+<p><audio controls=""><source src="guitare.mp3"></audio></p>
+<h4 id="enveloppe-damplitude-du-son">Enveloppe d'amplitude du son</h4>
+<figure>
+<img src="guitenv.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Envelope d'amplitude d'un son de guitare.</i></center></figcaption>
+</figure>
+
+<h4 id="londe-sonore">L'onde sonore</h4>
+<figure>
+<img src="guitWav2.jpg" class="mx-auto d-block" width="50%">
+<figcaption><center><i>Graphe amplitude/temps, le même que pour l'enveloppe d'amplitude mais à l'échelle de la milliseconde.</i></center></figcaption>
+</figure>
+
+<h4 id="le-spectre_1">Le spectre</h4>
+<figure>
+<img src="guitspectre.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Spectre d'un son de guitare.</i></center></figcaption>
+</figure>
+
+<p>Le spectre peut être représenté en dB (à gauche) ou en amplitude linéaire à droite. En amplitude linéaire, le graphe met en évidence les partiels les plus intenses seulement. Le graphe en dB est plus proche de la perception.</p>
+<p>Le spectre de la guitare (réalisé juste après l'attaque) montre un série de partiels équidistants, tous multiples de 440Hz (la fondamentale). Quelques partiels non harmoniques sont également présents (en dessous de 300 Hz notamment) qui sont des partiels transitoires (disparaissent très vite).</p>
+<h4 id="le-sonagramme">Le sonagramme</h4>
+<figure>
+<img src="guitsonag.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Sonagramme (spectrogram en Anglais) d'un son de guitare.</i></center></figcaption>
+</figure>
+
+<h2 id="les-echelles-musicales">Les échelles musicales</h2>
+<!-- TODO: il faudrait des exemples Faust pour bien faire -->
+
+<h3 id="le-temperament-egal">Le tempérament égal</h3>
+<p>Dans la gamme à tempérament égal, le rapport de fréquence Fn / Fn-1 entre la fréquence Fn d'une note et la fréquence d'une note située un demi-ton au dessous Fn-1 est constant, quelle que soit la note considérée.</p>
+<p>Sachant que le rapport Fn / Fn-12 entre la fréquence d'une note Fn et la fréquence d'une note située à l'octace en dessous (12 demi-tons plus bas) Fn-12 est égal à 2: on en déduit que le rapport de Fn / Fn-1 = 2 puissance 1/12 = 1.05946.</p>
+<p>
+<script type="math/tex; mode=display">
+F_{n+1} = F_{n} \times 2^{1/12}
+</script>
+</p>
+<p>=&gt; si La3 vaut 440 Hz, le La#3 vaut 440 x 1,05946 = 466,16 Hz.</p>
+<p>
+<script type="math/tex; mode=display">
+F_{n} = 440 \times 2^{(n-69)/12}
+</script>
+</p>
+<p>=&gt; sachant qu'en MIDI, la note 69 est le La3 dont la fréquence vaut 440 Hz.</p>
+<h3 id="les-autres-temperaments">Les autres tempéraments</h3>
+<p>La musique est souvent construite à partir de sons ayant des hauteurs précises. Ces hauteurs sont souvent définies à partir des proportions liées à la succession des harmoniques à partir d'une note fondamentale ou tonique.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rapport de fréquence</td>
+<td>1</td>
+<td>9/8</td>
+<td>5/4</td>
+<td>4/3</td>
+<td>3/2</td>
+<td>5/3</td>
+<td>15/8</td>
+<td>2</td>
+</tr>
+<tr>
+<td>intervalle</td>
+<td>unisson</td>
+<td>2nde maj</td>
+<td>3ce maj</td>
+<td>4te juste</td>
+<td>5te juste</td>
+<td>6te maj</td>
+<td>7e maj</td>
+<td>octave</td>
+</tr>
+<tr>
+<td>note</td>
+<td>La2</td>
+<td>Si2</td>
+<td>Do#3</td>
+<td>Ré3</td>
+<td>Mi3</td>
+<td>Fa#3</td>
+<td>Sol#3</td>
+<td>La3</td>
+</tr>
+<tr>
+<td>fréquence juste</td>
+<td>220</td>
+<td>247,5</td>
+<td>275</td>
+<td>293,33</td>
+<td>330</td>
+<td>366,67</td>
+<td>412,5</td>
+<td>440</td>
+</tr>
+<tr>
+<td>tempérament égal</td>
+<td>220</td>
+<td>246,94</td>
+<td>277,18</td>
+<td>293,66</td>
+<td>329,63</td>
+<td>369,99</td>
+<td>415,3</td>
+<td>440</td>
+</tr>
+<tr>
+<td>écart (en 1/2 ton)</td>
+<td>0,00</td>
+<td>4%</td>
+<td>14%</td>
+<td>2%</td>
+<td>2%</td>
+<td>16%</td>
+<td>12%</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>f. pythagoricienne</td>
+<td>220</td>
+<td>247,5</td>
+<td>278,44</td>
+<td>297,34</td>
+<td>330</td>
+<td>371,25</td>
+<td>417,66</td>
+<td>446</td>
+</tr>
+<tr>
+<td>f. pythog. corrigée</td>
+<td>220</td>
+<td>247,5</td>
+<td>278,44</td>
+<td>297,34</td>
+<td>330</td>
+<td>371,25</td>
+<td>417,66</td>
+<td>440</td>
+</tr>
+</tbody>
+</table>
+<h4 id="la-gamme-pythagoricienne">La gamme pythagoricienne</h4>
+<p>Elle est construite en utilisant le cycle des quintes :</p>
+<p>do - sol - ré - la - mi - si - fa# - do# - sol# - ré# - la# - mi# (fa) - si# (do)</p>
+<p>On appelle gamme pythagoricienne toute gamme musicale fondée uniquement sur des intervalles d'octaves et de quintes acoustiquement pures. Un telle gamme contient aussi des quartes pures, renversements des quintes.</p>
+<p>La douzième quinte dépassant légèrement l'octave (d'un comma), elle va être réduite pour former l'octave juste. Cette quinte plus petite est inutilisable en musique car elle sonne faux. On dit qu'elle hurle, et se nomme « quinte du loup ». Dans la pratique, les musiciens qui utilisent une gamme pythagoricienne placent la quinte du loup dans un intervalle peu utilisé, comme par exemple sol# - mi#.</p>
+<h4 id="la-gamme-de-zarlino">La gamme de Zarlino</h4>
+<p>Avec le tempérament Zarlino, les principaux intervalles dans un mode donné (par exemple en do) correspondent à des rapports de fréquences qui correspondent à des fractions simples : do- ré = 9/8 (deux quintes pures transposées d’une octave : 3/2 × 3/2 ÷ 2), do-mib =  6/5 do-mi = 5/4, do - fa = 4/3, do = sol = 3/2, do - la = 5/3 (une tierce majeure + une quarte : 5/4 x 4/3 = 5/3), do-si = 15/8 (une tierce majeure + une quinte: 5/4 x 3/2 = 15/8).</p>
+<figure>
+<img src="zarlino.png" class="mx-auto d-block" width="100%">
+</figure>
+
+<h4 id="la-gamme-de-werckmeister-iii">La gamme de Werckmeister III</h4>
+<p>Dans ce tempérament, le comma pythagoricien est réparti par quarts sur 4 quintes (qui deviennent ainsi un peu courtes) : do-sol, sol-ré, ré-la et si-solb.</p>
+<p>Ainsi les tierces do-mi et fa-la sont assez proches d’intervalles justes, les autres s'en éloignant progressivement. Ce tempérament, par le choix de la quinte tempérée si-solb favorise les tonalités en bémol.</p>
+<figure>
+<img src="werck3.png" class="mx-auto d-block" width="100%">
+</figure>
+
+<video width="100%" controls="controls">
+  <source src="temperament.mp4" type="video/mp4">
+</video>
 
 <script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script></div>
             </div>

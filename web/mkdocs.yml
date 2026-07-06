@@ -3,14 +3,17 @@ site_description: ECIU Micro-Module on Embedded Real-Time Audio
 nav:
     - Cours:
         - ' 1: Généralités ' : lectures/generalite.md
-        - ' 1: Théorie du son ' : lectures/theorie.md
+        - ' 2: Théorie du son ' : lectures/theorie.md
+        - ' 3: Analyse du son ' : lectures/analyse.md
+        - ' 4: Le son numérique ' : lectures/numerique.md
+        - ' 5: Acoustique instrumentale et architecturale ' : lectures/instrum-archi.md
     - Labs:
         - ' 1: Généralités ' : lectures/generalite.md
     - Code: "https://github.com/inria-emeraude/son"
     
 theme: 
   name: yeti
-  navigation_depth: 4
+  navigation_depth: 3
 
 site_dir: ../docs
 site_url: https://inria-emeraude.github.io/ujm-acoustique/

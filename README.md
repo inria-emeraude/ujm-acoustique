@@ -1,5 +1,12 @@
 # Acoustique @ UJM (L3 Musico)
 
+## TODOs
+
+* Il faudrait avoir une section sur Faust quelque part. 
+* Dans un TD on pourrait leur demander de supprimer les transitoires
+
+## Thoughts
+
 This repo contains the source code of the acoustics course of Université Jean Monnet's music department.
 
 * Dans théorie du son, il manque une courbe sur le "human hearing range": <https://www.researchgate.net/figure/Curves-of-equal-loudness-for-frequencies-in-the-range-of-human-hearing-after-ISO-2003_fig1_335473168>
