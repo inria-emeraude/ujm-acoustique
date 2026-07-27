@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/instru/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 8: Acoustique instrumentale  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1: Généralités </a>
+</li>
+                                    
+<li>
+    <a href="../theorie/" class="dropdown-item"> 2: Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="../classification/" class="dropdown-item"> 3: Classification des sons </a>
+</li>
+                                    
+<li>
+    <a href="../parametres/" class="dropdown-item"> 4: Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../analyse/" class="dropdown-item"> 5: Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../echelles/" class="dropdown-item"> 6: Les échelles musicales </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 7: Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 8: Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../voix/" class="dropdown-item"> 9: La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../archi/" class="dropdown-item"> 10: Acoustique architecturale </a>
+</li>
+                                    
+<li>
+    <a href="../psycho/" class="dropdown-item"> 11: Psychoacoustique </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../labs/classification/" class="dropdown-item"> 1: Les différents types de sons </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/parametres/" class="dropdown-item"> 2: Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/numerique/" class="dropdown-item"> 3: Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/instru/" class="dropdown-item"> 4: Acoustique instrumentale, architecturale et vocale </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../numerique/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../voix/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#acoustique-instrumentale" class="nav-link">Acoustique instrumentale</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#les-instruments-a-cordes" class="nav-link">Les instruments à cordes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#les-instruments-a-membranes-et-a-plaques" class="nav-link">Les instruments à membranes et à plaques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#les-instruments-a-tubes-et-a-tuyaux" class="nav-link">Les instruments à tubes et à tuyaux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="acoustique-instrumentale">Acoustique instrumentale</h1>
+<h2 id="les-instruments-a-cordes">Les instruments à cordes</h2>
+<p>Les vibrations d’une corde sont essentiellement transversales. Les différents modes de vibration d’une corde sont en relation harmonique :</p>
+<figure>
+<img src="cordemasses.gif" class="mx-auto d-block" width="60%">
+</figure>
+
+<video width="100%" controls="controls">
+  <source src="corde234.mp4" type="video/mp4">
+</video>
+
+<p><strong>La fondamentale :</strong></p>
+<p>
+<script type="math/tex; mode=display">
+f_{1} = \frac{v}{2L} = \frac{\sqrt{T/M}}{2L}
+</script>
+</p>
+<p>avec :</p>
+<ul>
+<li><em>v</em> la vitesse de propagation du son dans la corde,</li>
+<li><em>T</em> la tension de la corde,</li>
+<li><em>M</em> sa masse par unité de longueur</li>
+<li><em>L</em> la longueur de la corde</li>
+</ul>
+<p><strong>Les harmoniques :</strong></p>
+<p>
+<script type="math/tex; mode=display">
+f_{n} = n.f_{1} = n.\frac{v}{2L}
+</script>
+</p>
+<p>Le mouvement de la corde est une combinaison de ces divers modes de vibration. Les amplitudes relatives de chaque mode définissent le spectre de la vibration et dépendent du mode d’excitation de la corde et en particulier de la position de l’excitation sur la corde.</p>
+<p>Si la corde est pincée en son centre, les harmoniques pairs sont inexistants.
+L’amplitude des harmoniques impairs est inversement proportionnelle au carré de leur rang harmonique. Si l’amplitude de la fondamentale est égale à 1, le troisième harmonique aura une amplitude de 1/9, le cinquième harmonique une amplitude de 1/25.</p>
+<p>Si par contre la corde est pincée vers une extrémité, par exemple à 1/5 de sa longueur, les harmoniques de rang 5, 10… disparaissent mais toutes les autres harmoniques sont présents. Leurs amplitudes relatives décroissent moins vite.</p>
+<p>Plus la corde est pincée près de l’extrémité, plus les harmoniques élevés sont intenses.</p>
+<figure>
+<img src="cordespincees.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Spectre d’un son de corde pincée, à gauche jouée en son centre, à droite jouée à 1/5 de sa longueur, amplitudes logarithmiques (d’après [Rossing—1990, pp. 189-190]).</i></center></figcaption>
+</figure>
+
+<h2 id="les-instruments-a-membranes-et-a-plaques">Les instruments à membranes et à plaques</h2>
+<p>Alors qu’une corde est un système à une dimension (ligne), les membranes et les plaques sont des systèmes vibrants à deux dimensions (surface). Au sens large, ce sont les peaux des tomes de percussions, les lames des percussions à claviers, les cloches ou même les éléments d’une caisse de résonance d’un violon.</p>
+<figure>
+<img src="chladmi.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Principaux modes de vibration d’une membrane circulaire idéale.</i></center></figcaption>
+</figure>
+
+<p>Ces modes de vibrations peuvent être mis en évidence par une expérience assez simple.</p>
+<p>Cette expérience est observable par exemple dans la salle "Sons et vibrations" du Palais de la découverte à Paris.</p>
+<p>Elle montre que lorsqu'une plaque vibre à une de ses fréquences de résonance, certaines zones de la plaque restent immobiles, si bien que le sable s'y accumule.</p>
+<!-- TODO: ça serait cool d'avoir une vidéo ici -->
+
+<h2 id="les-instruments-a-tubes-et-a-tuyaux">Les instruments à tubes et à tuyaux</h2>
+<p>Les instruments à vent se distinguent par la forme de leur résonateur et la nature de l'anche utilisée.</p>
+<p>Les résonateurs sont généralement coniques ou cylindriques. Les vibrations sont longitudinales.</p>
+<p>On distingue deux sortes de tuyaux sonores : les tuyaux à anche qui sont toujours ouverts à l’autre extrémité et les tuyaux à embouchure de flûte qui peuvent être ouverts ou fermés à l'autre extrémité. Il se produit toujours un nœud à une extrémité fermée et un ventre à une extrémité ouverte. Dans ce dernier cas, la pression de l’air à l’extrémité ouverte est égale en permanence à la pression atmosphérique</p>
+<p>Un tuyau ouvert aux deux extrémités a une fréquence de vibration propre F inversement proportionnelle à la longueur L du tuyau.</p>
+<p><em>F = c/2L</em> ou <em>lambda = 2L</em></p>
+<p>Un tuyau fermé à une extrémité donne un son d’une octave plus bas qu'un tuyau ouvert de même longueur.</p>
+<figure>
+<img src="tuyaux.gif" class="mx-auto d-block" width="60%">
+</figure>
+
+<p>L'impédance d'un tube cylindrique varie avec la fréquence et favorise les harmoniques impairs.</p>
+<figure>
+<img src="tubecylindric.gif" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>Pour un tube conique par contre, tous les harmoniques sont présents car la propagation du son est de type sphérique.</p>
+<p>Dans le cas d’un cône évasé (cas du Cor), les partiels ne sont plus harmoniques (1f, 1,8f, 2,7f, 3,6f).</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

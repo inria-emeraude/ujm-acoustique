@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/labs/classification/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 1: Les différents types de sons  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../lectures/generalite/" class="dropdown-item"> 1: Généralités </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/theorie/" class="dropdown-item"> 2: Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/classification/" class="dropdown-item"> 3: Classification des sons </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/parametres/" class="dropdown-item"> 4: Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/analyse/" class="dropdown-item"> 5: Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/echelles/" class="dropdown-item"> 6: Les échelles musicales </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/numerique/" class="dropdown-item"> 7: Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/instru/" class="dropdown-item"> 8: Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/voix/" class="dropdown-item"> 9: La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/archi/" class="dropdown-item"> 10: Acoustique architecturale </a>
+</li>
+                                    
+<li>
+    <a href="../../lectures/psycho/" class="dropdown-item"> 11: Psychoacoustique </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 1: Les différents types de sons </a>
+</li>
+                                    
+<li>
+    <a href="../parametres/" class="dropdown-item"> 2: Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 3: Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item"> 4: Acoustique instrumentale, architecturale et vocale </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../lectures/psycho/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../parametres/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#lab-les-differents-types-de-son" class="nav-link">Lab : Les différents types de son</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#exercice-1-synthese-dun-son-de-diapason-8-pt" class="nav-link">Exercice 1 : Synthèse d'un son de diapason (8 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#exercice-2-synthese-dun-son-de-corde-6-pt" class="nav-link">Exercice 2 : Synthèse d'un son de corde (6 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#exercice-3-synthese-dun-son-de-cloche-6-pt" class="nav-link">Exercice 3 : Synthèse d'un son de cloche (6 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="lab-les-differents-types-de-son">Lab : Les différents types de son</h1>
+<h2 id="exercice-1-synthese-dun-son-de-diapason-8-pt">Exercice 1 : Synthèse d'un son de diapason (8 pt)</h2>
+<p>Le programme Faust suivant :</p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+process = button("gate") : ba.impulsify : 
+    pm.modeFilter(300,0.25,0.5)
+    <: _,_; // stereo
+-->
+</faust-editor>
+</p>
+
+<p>permet de synthétiser 1 mode de résonance (une sinusoïde avec une envelope exponentielle). Dans la configuration actuelle, la fréquence de la sinusoïde est de 300 Hz et le temps de résonance est de 0.25 seconde. 0.5 correspond au volume du son (cette valeur ne doit pas être modifiée).</p>
+<p>Un diapason produit 1 mode de résonance à 440 Hz (LA3) pendant une durée d'environ 10s. </p>
+<p>Changez le programme ci-dessus pour synthétiser un son de diapason. </p>
+<h2 id="exercice-2-synthese-dun-son-de-corde-6-pt">Exercice 2 : Synthèse d'un son de corde (6 pt)</h2>
+<p>Le programme Faust suivant :</p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+
+process = button("gate") : ba.impulsify <: 
+    (pm.modeFilter(300,2,1) + 
+    pm.modeFilter(310,2,1) + 
+    pm.modeFilter(320,2,1) + 
+    pm.modeFilter(330,2,1) + 
+    pm.modeFilter(340,2,1))
+    /10 // divide signal by 10 (more quiet)
+    <: _,_; // stereo
+-->
+</faust-editor>
+</p>
+
+<p>implémente 5 modes de résonance avec la fonction <code>pm.modeFiler</code>. Chaque itérations de <code>pm.modeFiler</code> équivaut à un mode. Dans le cas du premier mode (<code>pm.modeFilter(300,2,1)</code>), 300 correspond à la fréquence du mode, 2 à son temps de résonance en seconde et 1 à son volume.</p>
+<p>Les fréquences des modes d'une corde pincée correspondent à <em>f</em>, <em>f</em>x2, <em>f</em>x3, <em>f</em>x4, où <em>f</em> est la fréquence de la fondamentale. Le temps de résonance d'une corde pincée est de 5 secondes environ et les modes les plus aigus disparaissent plus rapidement que les modes les plus graves.</p>
+<p>Modifiez le programme ci-dessus pour synthétiser un son de corde pincée à 200 Hz contenant 5 modes. La durée du mode de la fondamentale devrait être de 5s. Les durées des autres modes sont à tester de manière empirique pour avoir un son satisfaisant.</p>
+<h2 id="exercice-3-synthese-dun-son-de-cloche-6-pt">Exercice 3 : Synthèse d'un son de cloche (6 pt)</h2>
+<p>La figure suivante :</p>
+<figure>
+<img src="bell.jpg" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>présente les différents mode de vibration d'une cloche. Les valeurs 1.0, 3.0, 5.4, 7.6, etc. correspondent à des ratios de la fondamentale. Par exemple, si la fondamentale est 100Hz, alors les fréquences des premiers modes seront 100x1.0, 100x3.0, 100x5.4, 100x7.6, etc.</p>
+<p>En vous inspirant du programme Faust de l'exercise 2, implémentez un synthétiseur de son de cloche. Partons du principe que cette cloche résonnera pendant 15s et que les modes aigus se dissiperont plus vite que les modes graves.</p>
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
