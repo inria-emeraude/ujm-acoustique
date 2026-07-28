@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/echelles-temperaments/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 8. Intervalles, gammes et tempéraments  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../propagation-reception/" class="dropdown-item"> 1. Le son : production, propagation et réception </a>
+</li>
+                                    
+<li>
+    <a href="../parametres-du-son/" class="dropdown-item"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../representer-analyser/" class="dropdown-item"> 3. Représenter, classer et analyser les sons </a>
+</li>
+                                    
+<li>
+    <a href="../son-numerique/" class="dropdown-item"> 4. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../psychoacoustique/" class="dropdown-item"> 5. Psychoacoustique : du signal à la perception </a>
+</li>
+                                    
+<li>
+    <a href="../acoustique-instrumentale/" class="dropdown-item"> 6. Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../voix-chantee/" class="dropdown-item"> 7. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 8. Intervalles, gammes et tempéraments </a>
+</li>
+                                    
+<li>
+    <a href="../acoustique-des-salles/" class="dropdown-item"> 9. Acoustique des salles </a>
+</li>
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1. Généralités </a>
+</li>
+                                    
+<li>
+    <a href="../theorie/" class="dropdown-item"> 2. Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="../classification/" class="dropdown-item"> 3. Classification des sons </a>
+</li>
+                                    
+<li>
+    <a href="../parametres/" class="dropdown-item"> 4. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../analyse/" class="dropdown-item"> 5. Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../echelles/" class="dropdown-item"> 6. Les échelles musicales </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 7. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item"> 8. Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../voix/" class="dropdown-item"> 9. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../archi/" class="dropdown-item"> 10. Acoustique architecturale </a>
+</li>
+                                    
+<li>
+    <a href="../psycho/" class="dropdown-item"> 11. Psychoacoustique </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../labs/classification/" class="dropdown-item"> 1. Les différents types de sons </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/parametres/" class="dropdown-item"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/numerique/" class="dropdown-item"> 3. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/instru/" class="dropdown-item"> 4. Acoustique instrumentale, architecturale et vocale </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../voix-chantee/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../acoustique-des-salles/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#intervalles-gammes-et-temperaments" class="nav-link">Intervalles, gammes et tempéraments</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#octave-et-rapports-de-frequences" class="nav-link">Octave et rapports de fréquences</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#battements-et-justesse" class="nav-link">Battements et justesse</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#intonation-juste-zarlino" class="nav-link">Intonation juste (Zarlino)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gamme-pythagoricienne" class="nav-link">Gamme pythagoricienne</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#temperaments-inegaux" class="nav-link">Tempéraments inégaux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#temperament-egal" class="nav-link">Tempérament égal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#accordage-et-pratique-musicale" class="nav-link">Accordage et pratique musicale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#a-retenir" class="nav-link">À retenir</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="intervalles-gammes-et-temperaments">Intervalles, gammes et tempéraments</h1>
+<!--
+## Objectifs
+
+- relier les intervalles à des rapports de fréquences ;
+- comprendre pourquoi plusieurs systèmes d’accordage sont possibles ;
+- distinguer intonation juste, gamme pythagoricienne et tempérament égal ;
+- écouter des différences d’accordage sans réduire la musique à des calculs.
+-->
+
+<h2 id="octave-et-rapports-de-frequences">Octave et rapports de fréquences</h2>
+<p>La sensation d’intervalle dépend principalement du rapport entre les fréquences.
+Une octave correspond au rapport <script type="math/tex">2/1</script> :</p>
+<ul>
+<li>110 Hz et 220 Hz ;</li>
+<li>220 Hz et 440 Hz ;</li>
+<li>440 Hz et 880 Hz.</li>
+</ul>
+<p>Des rapports simples correspondent à plusieurs intervalles consonants :</p>
+<table>
+<thead>
+<tr>
+<th>Intervalle</th>
+<th style="text-align: right;">Rapport simple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unisson</td>
+<td style="text-align: right;">1/1</td>
+</tr>
+<tr>
+<td>octave</td>
+<td style="text-align: right;">2/1</td>
+</tr>
+<tr>
+<td>quinte juste</td>
+<td style="text-align: right;">3/2</td>
+</tr>
+<tr>
+<td>quarte juste</td>
+<td style="text-align: right;">4/3</td>
+</tr>
+<tr>
+<td>tierce majeure juste</td>
+<td style="text-align: right;">5/4</td>
+</tr>
+<tr>
+<td>tierce mineure juste</td>
+<td style="text-align: right;">6/5</td>
+</tr>
+</tbody>
+</table>
+<p>Ces rapports apparaissent dans la série harmonique, mais leur utilisation dans
+une gamme complète soulève des difficultés : il n’est pas possible de conserver
+tous les intervalles parfaitement purs dans toutes les tonalités avec un
+système fixe de douze notes.</p>
+<h2 id="battements-et-justesse">Battements et justesse</h2>
+<p>Deux fréquences très proches produisent des variations périodiques d’amplitude
+appelées <strong>battements</strong>. Plus les fréquences sont proches, plus les battements
+sont lents (cf. <a href="../psychoacoustique/">cours de psychoacoustique</a>).</p>
+<p>Les musiciens utilisent souvent les battements pour ajuster un intervalle. Un
+intervalle légèrement différent d’un rapport simple peut faire battre certains
+harmoniques.</p>
+<h2 id="intonation-juste-zarlino">Intonation juste (Zarlino)</h2>
+<p>Dans une <a href="https://fr.wikipedia.org/wiki/Intonation_juste">intonation juste</a> (ou dite de « Zarlino »), les intervalles principaux d’une tonalité utilisent
+des rapports simples.</p>
+<p>Exemple d’une gamme majeure construite sur La :</p>
+<table>
+<thead>
+<tr>
+<th>Degré</th>
+<th style="text-align: right;">La</th>
+<th style="text-align: right;">Si</th>
+<th style="text-align: right;">Do♯</th>
+<th style="text-align: right;">Ré</th>
+<th style="text-align: right;">Mi</th>
+<th style="text-align: right;">Fa♯</th>
+<th style="text-align: right;">Sol♯</th>
+<th style="text-align: right;">La</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rapport</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">9/8</td>
+<td style="text-align: right;">5/4</td>
+<td style="text-align: right;">4/3</td>
+<td style="text-align: right;">3/2</td>
+<td style="text-align: right;">5/3</td>
+<td style="text-align: right;">15/8</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>Fréquence si La = 220 Hz</td>
+<td style="text-align: right;">220</td>
+<td style="text-align: right;">247,5</td>
+<td style="text-align: right;">275</td>
+<td style="text-align: right;">293,3</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">366,7</td>
+<td style="text-align: right;">412,5</td>
+<td style="text-align: right;">440</td>
+</tr>
+</tbody>
+</table>
+<p>et d'une gamme chromatique :</p>
+<figure>
+<img src="../../res/zarlino.png" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Ce système produit de très beaux accords dans certaines tonalités, mais ne
+permet pas de moduler librement sans modifier l’accordage.</p>
+<h2 id="gamme-pythagoricienne">Gamme pythagoricienne</h2>
+<p>La <a href="https://fr.wikipedia.org/wiki/Accord_pythagoricien">gamme pythagoricienne</a> est construite à partir de quintes pures de rapport
+<script type="math/tex">3/2</script> :</p>
+<p>do – sol – ré – la – mi – si – fa♯ – do♯ – sol♯ – ré♯ – la♯ – mi♯</p>
+<p>Après douze quintes, on ne retombe pas exactement sur la même fréquence qu’après
+sept octaves. Le petit écart obtenu est le <strong>comma pythagoricien</strong>.</p>
+<p>Dans un accordage fixe, cet écart doit être placé ou réparti. Si onze quintes
+restent pures, la dernière devient très différente : c’est la <strong>quinte du
+loup</strong>.</p>
+<p>La gamme pythagoricienne favorise les quintes, mais ses tierces majeures sont
+sensiblement plus larges que les tierces justes.</p>
+<h2 id="temperaments-inegaux">Tempéraments inégaux</h2>
+<p>Les tempéraments répartissent les écarts entre plusieurs intervalles.
+<a href="https://en.wikipedia.org/wiki/Werckmeister_temperament">Werckmeister III</a>, par exemple, réduit légèrement certaines quintes afin de
+rendre davantage de tonalités utilisables.</p>
+<figure>
+<img src="../../res/werck3.png" class="mx-auto d-block" width="100%">
+</figure>
+
+<p>Les tonalités ne sont alors pas parfaitement équivalentes : certaines possèdent
+des tierces plus pures, d’autres des intervalles plus tendus. Cette diversité
+fait partie de la couleur musicale des tempéraments historiques.</p>
+<h2 id="temperament-egal">Tempérament égal</h2>
+<p>Dans le tempérament égal à douze demi-tons, l’octave est divisée en douze
+intervalles égaux. Le rapport entre deux demi-tons successifs est :</p>
+<p>
+<script type="math/tex; mode=display">
+2^{1/12} \approx 1{,}05946
+</script>
+</p>
+<p>La fréquence de la note suivante est donc :</p>
+<p>
+<script type="math/tex; mode=display">
+f_{n+1}=f_n \times 2^{1/12}
+</script>
+</p>
+<p>Si La = 440 Hz, le La♯ suivant vaut environ :</p>
+<p>
+<script type="math/tex; mode=display">
+440 \times 2^{1/12} = 466{,}16\ \text{Hz}
+</script>
+</p>
+<p>Avec la numérotation MIDI, où le La 440 Hz porte le numéro 69 :</p>
+<p>
+<script type="math/tex; mode=display">
+f_n = 440 \times 2^{(n-69)/12}
+</script>
+</p>
+<p>Le tempérament égal rend toutes les tonalités transposables de manière
+identique. En contrepartie, à l’exception de l’octave, ses intervalles ne sont
+pas parfaitement purs.</p>
+<h2 id="accordage-et-pratique-musicale">Accordage et pratique musicale</h2>
+<p>Un système d’accordage n’est pas seulement une table de fréquences. Dans la
+pratique, les musiciens ajustent continuellement leur intonation selon :</p>
+<ul>
+<li>le contexte harmonique ;</li>
+<li>la fonction de la note dans l’accord ;</li>
+<li>le timbre ;</li>
+<li>le registre ;</li>
+<li>les autres musiciens ;</li>
+<li>les possibilités de l’instrument.</li>
+</ul>
+<p>Les instruments à hauteur libre peuvent adapter les intervalles. Les
+instruments à clavier imposent généralement un accordage préparé à l’avance.
+Dans un ensemble, plusieurs logiques d’intonation peuvent donc coexister.</p>
+<!--
+## Activités
+
+1. Écouter et comparer une tierce majeure juste et tempérée.
+2. Faire apparaître des battements entre deux fréquences voisines.
+3. Comparer une cadence dans plusieurs tempéraments.
+4. Discuter l’accordage dans un quatuor à cordes, un chœur et un ensemble avec
+   piano.
+-->
+
+<h2 id="a-retenir">À retenir</h2>
+<ul>
+<li>Les intervalles correspondent à des rapports de fréquences.</li>
+<li>Les rapports simples sont liés à la consonance et à la série harmonique.</li>
+<li>Aucun accordage fixe à douze notes ne conserve tous les intervalles purs.</li>
+<li>Les tempéraments réalisent des compromis différents.</li>
+<li>Le tempérament égal facilite la modulation, mais tempère presque tous les
+  intervalles.</li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

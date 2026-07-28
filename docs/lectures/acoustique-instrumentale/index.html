@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/acoustique-instrumentale/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 6. Acoustique instrumentale  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../propagation-reception/" class="dropdown-item"> 1. Le son : production, propagation et réception </a>
+</li>
+                                    
+<li>
+    <a href="../parametres-du-son/" class="dropdown-item"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../representer-analyser/" class="dropdown-item"> 3. Représenter, classer et analyser les sons </a>
+</li>
+                                    
+<li>
+    <a href="../son-numerique/" class="dropdown-item"> 4. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../psychoacoustique/" class="dropdown-item"> 5. Psychoacoustique : du signal à la perception </a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 6. Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../voix-chantee/" class="dropdown-item"> 7. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../echelles-temperaments/" class="dropdown-item"> 8. Intervalles, gammes et tempéraments </a>
+</li>
+                                    
+<li>
+    <a href="../acoustique-des-salles/" class="dropdown-item"> 9. Acoustique des salles </a>
+</li>
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1. Généralités </a>
+</li>
+                                    
+<li>
+    <a href="../theorie/" class="dropdown-item"> 2. Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="../classification/" class="dropdown-item"> 3. Classification des sons </a>
+</li>
+                                    
+<li>
+    <a href="../parametres/" class="dropdown-item"> 4. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../analyse/" class="dropdown-item"> 5. Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../echelles/" class="dropdown-item"> 6. Les échelles musicales </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 7. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item"> 8. Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../voix/" class="dropdown-item"> 9. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../archi/" class="dropdown-item"> 10. Acoustique architecturale </a>
+</li>
+                                    
+<li>
+    <a href="../psycho/" class="dropdown-item"> 11. Psychoacoustique </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../labs/classification/" class="dropdown-item"> 1. Les différents types de sons </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/parametres/" class="dropdown-item"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/numerique/" class="dropdown-item"> 3. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/instru/" class="dropdown-item"> 4. Acoustique instrumentale, architecturale et vocale </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../psychoacoustique/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../voix-chantee/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#acoustique-instrumentale" class="nav-link">Acoustique instrumentale</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#un-modele-general-de-linstrument" class="nav-link">Un modèle général de l’instrument</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cordes-vibrantes" class="nav-link">Cordes vibrantes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#influence-du-point-dexcitation" class="nav-link">Influence du point d’excitation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#membranes-plaques-et-barres" class="nav-link">Membranes, plaques et barres</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#colonnes-dair-et-instruments-a-vent" class="nav-link">Colonnes d’air et instruments à vent</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#tuyau-ouvert" class="nav-link">Tuyau ouvert</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#tuyau-ferme" class="nav-link">Tuyau fermé</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#couplage-entre-excitateur-et-resonateur" class="nav-link">Couplage entre excitateur et résonateur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#a-retenir" class="nav-link">À retenir</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#aller-plus-loin" class="nav-link">Aller plus loin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="acoustique-instrumentale">Acoustique instrumentale</h1>
+<!--
+## Objectifs
+
+- distinguer excitateur, vibrateur, résonateur et rayonnement ;
+- comprendre les modes de vibration d’une corde, d’une membrane et d’une
+  colonne d’air ;
+- relier mode de jeu et contenu spectral ;
+- comparer les grandes familles d’instruments sans entrer dans une modélisation
+  mathématique détaillée.
+-->
+
+<h2 id="un-modele-general-de-linstrument">Un modèle général de l’instrument</h2>
+<p>Un instrument acoustique associe généralement plusieurs fonctions :</p>
+<ol>
+<li>un apport d’énergie par le musicien ;</li>
+<li>un <strong>excitateur</strong> : doigt, archet, marteau, anche, jet d’air ;</li>
+<li>un <strong>élément vibrant</strong> : corde, membrane, plaque ou colonne d’air ;</li>
+<li>un <strong>résonateur</strong> qui renforce et colore certaines fréquences ;</li>
+<li>un mécanisme de <strong>rayonnement</strong> qui transmet le son à l’air.</li>
+</ol>
+<p>Ces fonctions peuvent être réunies dans un même objet ou réparties entre
+plusieurs éléments. Dans une guitare, par exemple, la corde vibre mais rayonne
+peu directement : elle transmet son mouvement à la table d’harmonie.</p>
+<h2 id="cordes-vibrantes">Cordes vibrantes</h2>
+<p>Les vibrations d’une corde sont principalement transversales. Une corde fixée
+à ses deux extrémités possède plusieurs modes de vibration.</p>
+<figure>
+<img src="../../res/cordemasses.gif" class="mx-auto d-block" width="60%">
+</figure>
+
+<video width="100%" controls="controls">
+  <source src="../../res/corde234.mp4" type="video/mp4">
+</video>
+
+<p>La fréquence fondamentale dépend :</p>
+<ul>
+<li>de la longueur <script type="math/tex">L</script> de la corde ;</li>
+<li>de sa tension <script type="math/tex">T</script> ;</li>
+<li>de sa masse par unité de longueur <script type="math/tex">M</script>.</li>
+</ul>
+<p>
+<script type="math/tex; mode=display">
+f_1 = \frac{1}{2L}\sqrt{\frac{T}{M}}
+</script>
+</p>
+<p>Il n’est pas nécessaire de mémoriser la formule. Elle indique simplement que :</p>
+<ul>
+<li>raccourcir la corde rend le son plus aigu ;</li>
+<li>augmenter sa tension rend le son plus aigu ;</li>
+<li>utiliser une corde plus lourde rend le son plus grave.</li>
+</ul>
+<p>Les fréquences des modes sont des multiples de la fondamentale :</p>
+<p>
+<script type="math/tex; mode=display">
+f_n = n f_1
+</script>
+</p>
+<h3 id="influence-du-point-dexcitation">Influence du point d’excitation</h3>
+<p>Le mouvement de la corde est une combinaison de plusieurs modes. Leur amplitude
+dépend du point et du type d’excitation.</p>
+<p>Une corde pincée en son centre ne peut pas exciter efficacement les modes qui
+ont un nœud à cet endroit : les harmoniques pairs sont fortement réduits. Une
+corde pincée près d’une extrémité excite davantage les harmoniques élevés et
+produit un son plus brillant.</p>
+<figure>
+<img src="../../res/cordespincees.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Spectres d’une corde pincée en son centre et au cinquième de sa longueur.</i></center></figcaption>
+</figure>
+
+<p>Le matériau du plectre, la dureté d’un marteau ou la position d’un archet
+modifient également le spectre et les transitoires.</p>
+<h2 id="membranes-plaques-et-barres">Membranes, plaques et barres</h2>
+<p>Une corde est un système vibrant à une dimension. Les membranes et les plaques
+vibrent selon deux dimensions et présentent des modes plus complexes.</p>
+<p>On rencontre notamment :</p>
+<ul>
+<li>des membranes dans les tambours ;</li>
+<li>des plaques dans les cymbales et les gongs ;</li>
+<li>des barres dans les xylophones et vibraphones ;</li>
+<li>des « coques » vibrantes dans les cloches ;</li>
+<li>des plaques dans les tables et caisses d’instruments à cordes.</li>
+</ul>
+<figure>
+<img src="../../res/chladmi.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Principaux modes d’une membrane circulaire idéale.</i></center></figcaption>
+</figure>
+
+<p>Les figures ci-dessus rendent visibles les lignes qui restent presque
+immobiles. Du sable posé sur une plaque vibrante s’y accumule :</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wvJAgrUBF4w?si=KJ9qNyAU6ZbawOn3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+<p>Les fréquences de ces modes ne forment généralement pas une série harmonique
+simple. C’est pourquoi les cloches, gongs et cymbales produisent souvent des
+sons inharmoniques.</p>
+<h2 id="colonnes-dair-et-instruments-a-vent">Colonnes d’air et instruments à vent</h2>
+<p>Dans un instrument à vent, l’élément résonant principal est une colonne d’air.
+L’excitation peut être produite par :</p>
+<ul>
+<li>un jet d’air sur un biseau, comme dans une flûte ;</li>
+<li>une anche simple, comme dans une clarinette ;</li>
+<li>une anche double, comme dans un hautbois ;</li>
+<li>les lèvres du musicien, comme dans une trompette.</li>
+</ul>
+<h3 id="tuyau-ouvert">Tuyau ouvert</h3>
+<p>Un tuyau idéal ouvert aux deux extrémités possède une fondamentale :</p>
+<p>
+<script type="math/tex; mode=display">
+f_1 = \frac{c}{2L}
+</script>
+</p>
+<p>Sa série de résonances contient tous les multiples de la fondamentale.</p>
+<h3 id="tuyau-ferme">Tuyau fermé</h3>
+<p>Un tuyau idéal fermé à une extrémité possède une fondamentale approximativement
+une octave plus grave qu’un tuyau ouvert de même longueur :</p>
+<p>
+<script type="math/tex; mode=display">
+f_1 = \frac{c}{4L}
+</script>
+</p>
+<p>Dans le modèle idéal, seules les résonances de rang impair sont présentes.</p>
+<figure>
+<img src="../../res/tuyaux.gif" class="mx-auto d-block" width="60%">
+</figure>
+
+<figure>
+<img src="../../res/tubecylindric.gif" class="mx-auto d-block" width="80%">
+</figure>
+
+<p>La clarinette se rapproche, dans son registre grave, d’un tuyau cylindrique
+fermé à une extrémité, ce qui contribue à l’importance de ses harmoniques
+impairs. La flûte se rapproche d’un tuyau ouvert. Un conduit conique, comme
+celui du hautbois ou du saxophone, présente une série de résonances plus proche
+de celle d’un tuyau ouvert.</p>
+<p>Les instruments acoustiques s’écartent de ces modèles : pavillon, trous, embouchure,
+pertes, doigtés et intensité de jeu déplacent les résonances et modifient le
+rayonnement.</p>
+<h2 id="couplage-entre-excitateur-et-resonateur">Couplage entre excitateur et résonateur</h2>
+<p>Le musicien n’impose pas toujours directement la fréquence. Dans les
+instruments auto-entretenus — voix, vents, cordes frottées — l’excitateur et le
+résonateur s’influencent mutuellement.</p>
+<p>Par exemple :</p>
+<ul>
+<li>l’anche d’une clarinette est entraînée par le souffle, mais la colonne d’air
+  sélectionne les régimes stables ;</li>
+<li>l’archet fournit continuellement de l’énergie à la corde ;</li>
+<li>les lèvres d’un trompettiste s’accordent sur une résonance du tube.</li>
+</ul>
+<p>Cette interaction explique la richesse, mais aussi les difficultés de contrôle,
+de nombreux instruments.</p>
+<!--
+## Activités
+
+1. Comparer une corde pincée près du centre et près du chevalet.
+2. Associer plusieurs instruments à un modèle : corde, membrane, plaque, barre
+   ou colonne d’air.
+3. Identifier l’excitateur, le vibrateur et le résonateur de cinq instruments.
+4. Comparer à l’oreille les attaques d’une même note jouée *sul tasto* et
+   *sul ponticello*.
+-->
+
+<h2 id="a-retenir">À retenir</h2>
+<ul>
+<li>Un instrument associe excitation, vibration, résonance et rayonnement.</li>
+<li>Longueur, tension et masse déterminent la hauteur d’une corde.</li>
+<li>Le point d’excitation modifie le contenu harmonique.</li>
+<li>Membranes et plaques produisent souvent des partiels inharmoniques.</li>
+<li>Les modèles de tuyaux ouverts et fermés expliquent une partie du
+  fonctionnement des vents, mais les instruments réels sont plus complexes.</li>
+</ul>
+<h2 id="aller-plus-loin">Aller plus loin</h2>
+<p>Si l'acoustique instrumentale vous intéresse, nous vous recommandons
+« The Physics of Musical Instruments » de Thomas D. ROSSING.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
