@@ -1,6 +1,6 @@
 # Lab : Les différents types de son
 
-## Exercice 1 : Synthèse d'un son de diapason (8 pt)
+## Synthèse d'un son de diapason (8 pt)
 
 Le programme Faust suivant :
 
@@ -21,7 +21,7 @@ Un diapason produit 1 mode de résonance à 440 Hz (LA3) pendant une durée d'en
 
 Changez le programme ci-dessus pour synthétiser un son de diapason. 
 
-## Exercice 2 : Synthèse d'un son de corde (6 pt)
+## Synthèse d'un son de corde (6 pt)
 
 Le programme Faust suivant :
 
@@ -48,12 +48,12 @@ Les fréquences des modes d'une corde pincée correspondent à *f*, *f*x2, *f*x3
 
 Modifiez le programme ci-dessus pour synthétiser un son de corde pincée à 200 Hz contenant 5 modes. La durée du mode de la fondamentale devrait être de 5s. Les durées des autres modes sont à tester de manière empirique pour avoir un son satisfaisant.
 
-## Exercice 3 : Synthèse d'un son de cloche (6 pt)
+## Synthèse d'un son de cloche (6 pt)
 
 La figure suivante :
 
 <figure>
-<img src="bell.jpg" class="mx-auto d-block" width="80%">
+<img src="../res/bell.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
 présente les différents mode de vibration d'une cloche. Les valeurs 1.0, 3.0, 5.4, 7.6, etc. correspondent à des ratios de la fondamentale. Par exemple, si la fondamentale est 100Hz, alors les fréquences des premiers modes seront 100x1.0, 100x3.0, 100x5.4, 100x7.6, etc.

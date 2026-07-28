@@ -8,7 +8,7 @@
         
         <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/labs/parametres/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title> 2. Les paramètres du son  - Acoustique @ UJM (L3 Musico)</title>
+        <title> 1. Les paramètres du son  - Acoustique @ UJM (L3 Musico)</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -81,11 +81,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../classification/" class="dropdown-item"> 1. Les différents types de sons </a>
+    <a href="./" class="dropdown-item active" aria-current="page"> 1. Les paramètres du son </a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page"> 2. Les paramètres du son </a>
+    <a href="../classification/" class="dropdown-item"> 2. Les différents types de sons </a>
 </li>
                                     
 <li>
@@ -93,7 +93,11 @@
 </li>
                                     
 <li>
-    <a href="../instru/" class="dropdown-item"> 4. Acoustique instrumentale, architecturale et vocale </a>
+    <a href="../voix/" class="dropdown-item"> 4. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../salles/" class="dropdown-item"> 5. Acoustique des salles </a>
 </li>
                                 </ul>
                             </li>
@@ -109,12 +113,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../classification/" class="nav-link">
+                                <a rel="prev" href="../../lectures/acoustique-des-salles/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../numerique/" class="nav-link">
+                                <a rel="next" href="../classification/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -138,23 +142,23 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#lab-les-parametres-du-son" class="nav-link">Lab : Les paramètres du son</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#exercice-1-periode-et-frequence-dun-son-7-pt" class="nav-link">Exercice 1 : Période et fréquence d'un son (7 pt)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#periode-et-frequence-dun-son-7-pt" class="nav-link">Période et fréquence d'un son (7 pt)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#exercice-2-frequence-fondamentale-1-pt" class="nav-link">Exercice 2 : Fréquence fondamentale (1 pt)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#frequence-fondamentale-1-pt" class="nav-link">Fréquence fondamentale (1 pt)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#exercice-3-envelope-2-pt" class="nav-link">Exercice 3 : Envelope (2 pt)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#envelope-2-pt" class="nav-link">Envelope (2 pt)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#exercice-4-spectre-dun-son-6-pt" class="nav-link">Exercice 4 : Spectre d'un son (6 pt)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#spectre-dun-son-6-pt" class="nav-link">Spectre d'un son (6 pt)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#exercice-5-synthetiser-un-son-a-partir-de-son-analyse-4-pt" class="nav-link">Exercice 5 : Synthétiser un son à partir de son analyse (4 pt)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#synthetiser-un-son-a-partir-de-son-analyse-4-pt" class="nav-link">Synthétiser un son à partir de son analyse (4 pt)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -166,12 +170,12 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="lab-les-parametres-du-son">Lab : Les paramètres du son</h1>
-<h2 id="exercice-1-periode-et-frequence-dun-son-7-pt">Exercice 1 : Période et fréquence d'un son (7 pt)</h2>
-<p>Le but de cet exercice est de déterminer la période et la fréquence du son suivant : <a href="voix.wav">voix.wav</a> en utilisant Audacity.</p>
+<h2 id="periode-et-frequence-dun-son-7-pt">Période et fréquence d'un son (7 pt)</h2>
+<p>Le but de cet exercice est de déterminer la période et la fréquence du son suivant : <a href="../../res/voix.wav">voix.wav</a> en utilisant Audacity.</p>
 <p>Tout d'abord, ouvrez le fichier audio dans Audacity.</p>
 <p>Zoomez sur la forme d'onde en cliquant sur l'icon "loupe" à côté de la barre de lecture afin d'afficher les échantillons :</p>
 <figure>
-<img src="forme-onde.jpg" class="mx-auto d-block" width="100%">
+<img src="../../res/forme-onde.jpg" class="mx-auto d-block" width="100%">
 </figure>
 
 <p>Dans la zone "Selection", changez les unités en "échantillons" (samples). Cette unité est la plus précise qu'Audacity fournisse.</p>
@@ -179,16 +183,16 @@
 <p>Calculez la période en nombre d'échantillon. </p>
 <p>Dans le fichier fourni, il y a 44.100 échantillons par secondes. Fort de cette information, convertissez la période en seconde.</p>
 <p>Calculez la fréquence du son à partir de la période. </p>
-<h2 id="exercice-2-frequence-fondamentale-1-pt">Exercice 2 : Fréquence fondamentale (1 pt)</h2>
+<h2 id="frequence-fondamentale-1-pt">Fréquence fondamentale (1 pt)</h2>
 <p>Trouvez la fréquence fondamentale de la suite harmonique : {310,465,620} Hz. </p>
 <p>À quelle note correspond-elle ?</p>
-<h2 id="exercice-3-envelope-2-pt">Exercice 3 : Envelope (2 pt)</h2>
-<p>Mesurez la durée de l'attaque et du release du son de piano suivant en secondes : <a href="a3-4.wav">a3-4.wav</a>.</p>
-<h2 id="exercice-4-spectre-dun-son-6-pt">Exercice 4 : Spectre d'un son (6 pt)</h2>
-<p>Mesurez la fréquence, l'amplitude en dB et la durée approximative en secondes des 13 premiers partiels du son suivant : <a href="a3-4.wav">a3-4.wav</a>.</p>
+<h2 id="envelope-2-pt">Envelope (2 pt)</h2>
+<p>Mesurez la durée de l'attaque et du release du son de piano suivant en secondes : <a href="../../res/piano.wav">piano.wav</a>.</p>
+<h2 id="spectre-dun-son-6-pt">Spectre d'un son (6 pt)</h2>
+<p>Mesurez la fréquence, l'amplitude en dB et la durée approximative en secondes des 13 premiers partiels du son suivant : <a href="../../res/piano.wav">piano.wav</a>.</p>
 <p>Pour la fréquence et l'amplitude, utilisez l'outil <code>Analyze/Plot Spectrum</code> d'Audacity. </p>
 <p>Pour la durée des partiels, affichez le spectrogram du son dans Audacity et repérez les partiels en fonctions des mesures effectuées dans l'étape précédente. </p>
-<h2 id="exercice-5-synthetiser-un-son-a-partir-de-son-analyse-4-pt">Exercice 5 : Synthétiser un son à partir de son analyse (4 pt)</h2>
+<h2 id="synthetiser-un-son-a-partir-de-son-analyse-4-pt">Synthétiser un son à partir de son analyse (4 pt)</h2>
 <p>Utilisez les valeurs obtenues dans l'exercice précédent pour paramétrer le programme Faust suivant et synthétiser le son de piano enregistré :</p>
 <p>
 <faust-editor>

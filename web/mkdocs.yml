@@ -12,10 +12,11 @@ nav:
         - ' 8. Intervalles, gammes et tempéraments ' : lectures/echelles-temperaments.md
         - ' 9. Acoustique des salles ' : lectures/acoustique-des-salles.md
     - Labs:
-        - ' 1. Les différents types de sons ' : labs/classification.md
-        - ' 2. Les paramètres du son ' : labs/parametres.md
+        - ' 1. Les paramètres du son ' : labs/parametres.md
+        - ' 2. Les différents types de sons ' : labs/classification.md
         - ' 3. Le son numérique ' : labs/numerique.md
-        - ' 4. Acoustique instrumentale, architecturale et vocale ' : labs/instru.md
+        - ' 4. La voix chantée ' : labs/voix.md
+        - ' 5. Acoustique des salles ' : labs/salles.md
     - Code: "https://github.com/inria-emeraude/son"
     
 theme: 

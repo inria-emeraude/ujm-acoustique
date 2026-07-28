@@ -81,11 +81,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../classification/" class="dropdown-item"> 1. Les différents types de sons </a>
+    <a href="../parametres/" class="dropdown-item"> 1. Les paramètres du son </a>
 </li>
                                     
 <li>
-    <a href="../parametres/" class="dropdown-item"> 2. Les paramètres du son </a>
+    <a href="../classification/" class="dropdown-item"> 2. Les différents types de sons </a>
 </li>
                                     
 <li>
@@ -93,7 +93,11 @@
 </li>
                                     
 <li>
-    <a href="../instru/" class="dropdown-item"> 4. Acoustique instrumentale, architecturale et vocale </a>
+    <a href="../voix/" class="dropdown-item"> 4. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../salles/" class="dropdown-item"> 5. Acoustique des salles </a>
 </li>
                                 </ul>
                             </li>
@@ -109,12 +113,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../parametres/" class="nav-link">
+                                <a rel="prev" href="../classification/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../instru/" class="nav-link">
+                                <a rel="next" href="../voix/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -138,6 +142,22 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#lab-les-son-numerique" class="nav-link">Lab : Les son numérique</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#frequence-de-nyquist-5-pt" class="nav-link">Fréquence de Nyquist (5 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#aliasing-5-pt" class="nav-link">Aliasing (5 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dynamique-5-pt" class="nav-link">Dynamique (5 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#taille-dun-fichier-pcm-5-pt" class="nav-link">Taille d'un fichier PCM (5 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -146,7 +166,14 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="lab-les-son-numerique">Lab : Les son numérique</h1>
-<p>TODO</p>
+<h2 id="frequence-de-nyquist-5-pt">Fréquence de Nyquist (5 pt)</h2>
+<p>Quelle est la fréquence de Nyquist pour un son enregistré avec un taux d'échantillonnage de 192 kHz ? </p>
+<h2 id="aliasing-5-pt">Aliasing (5 pt)</h2>
+<p>Pour un taux d'échantillonnage de 44.100 Hz, quelle est la fréquence repliée/aliasée d'une sinusoïde à 25.428 Hz ?</p>
+<h2 id="dynamique-5-pt">Dynamique (5 pt)</h2>
+<p>Quel est le rapport signal bruit (SNR) approximatif d'un son enregistré sur 20 bits ?</p>
+<h2 id="taille-dun-fichier-pcm-5-pt">Taille d'un fichier PCM (5 pt)</h2>
+<p>Quelle est la taille en nombre de bits d'un fichier audio stéréo de 47 secondes échantillonné à 48 kHz et 24 bits ?</p>
 <script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script></div>
             </div>
         </div>

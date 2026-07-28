@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/labs/instru/">
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/labs/voix/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title> 4. Acoustique instrumentale, architecturale et vocale  - Acoustique @ UJM (L3 Musico)</title>
+        <title> 4. La voix chantée  - Acoustique @ UJM (L3 Musico)</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -81,11 +81,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../classification/" class="dropdown-item"> 1. Les différents types de sons </a>
+    <a href="../parametres/" class="dropdown-item"> 1. Les paramètres du son </a>
 </li>
                                     
 <li>
-    <a href="../parametres/" class="dropdown-item"> 2. Les paramètres du son </a>
+    <a href="../classification/" class="dropdown-item"> 2. Les différents types de sons </a>
 </li>
                                     
 <li>
@@ -93,7 +93,11 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page"> 4. Acoustique instrumentale, architecturale et vocale </a>
+    <a href="./" class="dropdown-item active" aria-current="page"> 4. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../salles/" class="dropdown-item"> 5. Acoustique des salles </a>
 </li>
                                 </ul>
                             </li>
@@ -114,7 +118,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../salles/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -136,8 +140,16 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#lab-acoustique-instrumentale-architecturale-et-vocale" class="nav-link">Lab : Acoustique instrumentale, architecturale et vocale</a>
+            <li class="nav-item" data-bs-level="1"><a href="#lab-voix-chantee" class="nav-link">Lab : Voix chantée</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#detection-de-formants-10-pt" class="nav-link">Détection de formants (10 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#synthetiseur-vocal-10-pt" class="nav-link">Synthétiseur vocal (10 pt)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -145,8 +157,44 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="lab-acoustique-instrumentale-architecturale-et-vocale">Lab : Acoustique instrumentale, architecturale et vocale</h1>
-<p>TODO</p>
+<h1 id="lab-voix-chantee">Lab : Voix chantée</h1>
+<p>La synthèse de la voix chantée est maîtrisée depuis de nombreuses années comme le montre les exemples fournis sur cette page : <a href="http://recherche.ircam.fr/anasyn/peeters/PSOLA/voix2.html">http://recherche.ircam.fr/anasyn/peeters/PSOLA/voix2.html</a></p>
+<p>Le but de ce lab est d'implémenter un synthétiseur vocal en analysant des sons de voix enregistrés. </p>
+<h2 id="detection-de-formants-10-pt">Détection de formants (10 pt)</h2>
+<p>Les 5 fichiers audio suivants contiennent l'enregistrement des 5 voyelles prononcées par une voix d'homme : <a href="../../res/a.wav">a.wav</a>, <a href="../../res/e.wav">e.wav</a>, <a href="../../res/i.wav">i.wav</a>, <a href="../../res/o.wav">o.wav</a> et <a href="../../res/u.wav">u.wav</a>.</p>
+<p>Pour chacun d'entre-eux, mesurez la fréquence en le niveau dB des 4 premiers formants en utilisant l'outil <code>Analyze/Plot Spectrum</code> d'Audacity.</p>
+<p>Consignez les valeurs dans un tableau.</p>
+<h2 id="synthetiseur-vocal-10-pt">Synthétiseur vocal (10 pt)</h2>
+<p>Le programme Faust suivant permet de synthétiser des voyelles en utilisant un modèle source/filtre : un oscillateur en dent de scie jour le rôle des cordes vocales et 4 filtre de type passe bande, la cavité buccale. </p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+
+// vowel values
+aFreq(i) = ba.take(i+1,(728,2653,3441,6417));
+aDB(i) = ba.take(i+1,(-7.4,-33.8,-31.3,-62.1));
+uFreq(i) = ba.take(i+1,(239,1821,2211,3151));
+uDB(i) = ba.take(i+1,(-2.4,-18.7,-15.3,-23));
+
+// change the vowel here
+vowelFreq = aFreq;
+vowelDB = aDB;
+
+process = os.sawtooth(100) <: 
+    par(i,4,fi.resonbp(vowelFreq(i),10,ba.db2linear(vowelDB(i)))) :> _/4
+    <: _,_; // stereo
+-->
+</faust-editor>
+</p>
+
+<p>Actuellement, la voyelle « a » est prononcée. </p>
+<p>Pour prononcer la voyelle « u », changez les deux lignes suivantes tel que :</p>
+<pre><code>vowelFreq = uFreq;
+vowelDB = uDB;
+</code></pre>
+<p>Entendez-vous la différence ?</p>
+<p>En utilisant les valeurs mesurées dans l'étape précédente, ajoutez les voyelles restantes (e, i, o) au programme en le modifiant. </p>
 <script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script></div>
             </div>
         </div>
