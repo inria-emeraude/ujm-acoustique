@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/propagation-reception/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 1. Le son : production, propagation et réception  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 1. Le son : production, propagation et réception </a>
+</li>
+                                    
+<li>
+    <a href="../parametres-du-son/" class="dropdown-item"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../representer-analyser/" class="dropdown-item"> 3. Représenter, classer et analyser les sons </a>
+</li>
+                                    
+<li>
+    <a href="../son-numerique/" class="dropdown-item"> 4. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1. Généralités </a>
+</li>
+                                    
+<li>
+    <a href="../theorie/" class="dropdown-item"> 2. Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="../classification/" class="dropdown-item"> 3. Classification des sons </a>
+</li>
+                                    
+<li>
+    <a href="../parametres/" class="dropdown-item"> 4. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../analyse/" class="dropdown-item"> 5. Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../echelles/" class="dropdown-item"> 6. Les échelles musicales </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 7. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item"> 8. Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../voix/" class="dropdown-item"> 9. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../archi/" class="dropdown-item"> 10. Acoustique architecturale </a>
+</li>
+                                    
+<li>
+    <a href="../psycho/" class="dropdown-item"> 11. Psychoacoustique </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../labs/classification/" class="dropdown-item"> 1. Les différents types de sons </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/parametres/" class="dropdown-item"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/numerique/" class="dropdown-item"> 3. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/instru/" class="dropdown-item"> 4. Acoustique instrumentale, architecturale et vocale </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../parametres-du-son/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#le-son-production-propagation-et-reception" class="nav-link">Le son : production, propagation et réception</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#quest-ce-que-lacoustique" class="nav-link">Qu’est-ce que l’acoustique ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#son-note-et-musique" class="nav-link">Son, note et musique</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#la-production-du-son" class="nav-link">La production du son</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#la-propagation" class="nav-link">La propagation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#la-reception-du-son" class="nav-link">La réception du son</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mesurer-et-representer-le-son" class="nav-link">Mesurer et représenter le son</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#a-retenir" class="nav-link">À retenir</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="le-son-production-propagation-et-reception">Le son : production, propagation et réception</h1>
+<!--
+## Objectifs
+
+À la fin de cette séance, les étudiants devront pouvoir :
+
+- expliquer simplement ce qu’est un son ;
+- identifier une source, un milieu de propagation et un récepteur ;
+- connaître l’ordre de grandeur de la vitesse du son ;
+- distinguer phénomène physique et sensation auditive.
+-->
+
+<h2 id="quest-ce-que-lacoustique">Qu’est-ce que l’acoustique ?</h2>
+<p>L’<strong>acoustique</strong> est la science du son. Elle étudie :</p>
+<ol>
+<li>la <strong>production</strong> du son par une source vibrante ;</li>
+<li>sa <strong>propagation</strong> dans un milieu ;</li>
+<li>sa <strong>réception</strong> par un auditeur ou un dispositif de mesure.</li>
+</ol>
+<p>L’<strong>acoustique musicale</strong> applique ces connaissances à la production, à
+l’organisation et à la perception des sons musicaux.</p>
+<figure>
+<img src="../../res/sciences_acoustique.jpg" class="mx-auto d-block" width="70%">
+<figcaption><center><i>Disciplines associées à l’acoustique (d’après Michel Bruneau).</i></center></figcaption>
+</figure>
+
+<h2 id="son-note-et-musique">Son, note et musique</h2>
+<p>Un <strong>son</strong> est une vibration mécanique susceptible de produire une sensation
+auditive. Une <strong>note</strong> est un symbole musical qui représente certaines
+caractéristiques d’un son, principalement sa hauteur et sa durée.</p>
+<p>Un même symbole musical peut être réalisé par des sons très différents selon
+l’instrument, le mode de jeu, la dynamique ou le lieu. Inversement, de nombreux
+sons employés en musique ne correspondent pas à une note déterminée : souffle,
+bruit, percussion, frottement, son électronique, etc.</p>
+<p>Le <strong>timbre</strong> permet notamment de distinguer deux sons de même hauteur et de même
+intensité. Il dépend du spectre, de l’attaque et de l’évolution du son.</p>
+<h2 id="la-production-du-son">La production du son</h2>
+<p>Une source sonore met en vibration le milieu qui l’entoure :</p>
+<ul>
+<li>une corde met en mouvement la table d’harmonie d’un instrument ;</li>
+<li>une membrane de haut-parleur déplace l’air ;</li>
+<li>les plis vocaux (cordes vocales) interrompent périodiquement un flux d’air ;</li>
+<li>une percussion met en vibration une peau, une plaque ou un volume d’air.</li>
+</ul>
+<p>La vibration de la source ne se déplace pas jusqu’à l’auditeur : elle transmet
+son mouvement aux particules voisines, qui le transmettent à leur tour.</p>
+<h2 id="la-propagation">La propagation</h2>
+<p>Une <strong>onde</strong> est une perturbation qui se propage. Le son a besoin d’un milieu
+matériel : air, eau, bois, métal, etc. Il ne se propage pas dans le vide.</p>
+<p>La vitesse du son dépend du milieu et de la température :</p>
+<table>
+<thead>
+<tr>
+<th>Milieu</th>
+<th>Température</th>
+<th>Vitesse approximative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>air</td>
+<td>0 °C</td>
+<td>331 m/s</td>
+</tr>
+<tr>
+<td>air</td>
+<td>20 °C</td>
+<td>343 m/s</td>
+</tr>
+<tr>
+<td>eau</td>
+<td>13 °C</td>
+<td>1 430 m/s</td>
+</tr>
+<tr>
+<td>fer</td>
+<td>20 °C</td>
+<td>4 900 m/s</td>
+</tr>
+<tr>
+<td>bois de sapin</td>
+<td>variable</td>
+<td>environ 5 000 m/s</td>
+</tr>
+</tbody>
+</table>
+<p>Dans l’air, on retient souvent l’ordre de grandeur de <strong>340 m/s</strong>.</p>
+<p><strong>Exemple :</strong> Si un événement se produit à 340 mètres, son son nous parvient environ une
+seconde plus tard. Ce délai explique pourquoi nous voyons un éclair avant
+d’entendre le tonnerre.</p>
+<h2 id="la-reception-du-son">La réception du son</h2>
+<p>Le pavillon de l’oreille recueille les vibrations. Elles sont transmises par le
+conduit auditif au tympan, puis à l’oreille interne. La cochlée transforme les
+vibrations en messages nerveux interprétés par le cerveau.</p>
+<figure>
+<img src="../../res/oreille.jpg" class="mx-auto d-block" width="70%">
+<figcaption><center><i><a href="https://www.cotral.fr/blog/prevention-risques-auditifs/le-fonctionnement-de-l-oreille-humaine.html">Structure de l'oreille humaine</a>.</i></center></figcaption>
+</figure>
+
+<p>Une personne jeune ayant une audition normale peut approximativement percevoir
+des fréquences comprises entre <strong>20 Hz et 20 000 Hz</strong> :</p>
+<ul>
+<li>en dessous de 20 Hz : <strong>infrasons</strong> ;</li>
+<li>au-dessus de 20 000 Hz : <strong>ultrasons</strong>.</li>
+</ul>
+<p>Ces limites varient selon les individus et évoluent notamment avec l’âge.</p>
+<figure>
+<img src="../../res/freqs.png" class="mx-auto d-block" width="30%">
+<figcaption><center><i>Fréquences perçues par différentes espèces.</i></center></figcaption>
+</figure>
+
+<p>L’oreille n’est pas également sensible à toutes les fréquences :</p>
+<figure>
+<img src="../../res/hearing-range.png" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Seuil approximatif d’audibilité de l’oreille humaine.</i></center></figcaption>
+</figure>
+
+<h2 id="mesurer-et-representer-le-son">Mesurer et représenter le son</h2>
+<p>Un microphone transforme les variations de pression acoustique en signal
+électrique. Ce signal peut ensuite être enregistré, observé ou analysé.</p>
+<p>Le phonautographe, puis le phonographe, ont permis de conserver une trace du
+son. Aujourd’hui, l’ordinateur permet notamment d’observer :</p>
+<ul>
+<li>la <strong>forme d’onde</strong>, qui montre l’évolution du signal dans le temps ;</li>
+<li>le <strong>spectre</strong>, qui montre la répartition du son selon les fréquences ;</li>
+<li>le <strong>sonagramme</strong>, qui montre l’évolution du spectre dans le temps.</li>
+</ul>
+<p>Ces représentations seront étudiées dans les séances suivantes.</p>
+<h2 id="a-retenir">À retenir</h2>
+<ul>
+<li>Un son est une vibration mécanique qui se propage dans un milieu.</li>
+<li>L’acoustique étudie sa production, sa propagation et sa réception.</li>
+<li>Le son se propage dans l’air à environ 340 m/s.</li>
+<li>Le domaine audible humain s’étend approximativement de 20 Hz à 20 kHz.</li>
+<li>Le signal physique et la sensation auditive ne doivent pas être confondus.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

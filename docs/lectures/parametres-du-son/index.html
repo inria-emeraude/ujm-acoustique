@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/lectures/parametres-du-son/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title> 2. Les paramètres du son  - Acoustique @ UJM (L3 Musico)</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Acoustique @ UJM (L3 Musico)</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cours</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../propagation-reception/" class="dropdown-item"> 1. Le son : production, propagation et réception </a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../representer-analyser/" class="dropdown-item"> 3. Représenter, classer et analyser les sons </a>
+</li>
+                                    
+<li>
+    <a href="../son-numerique/" class="dropdown-item"> 4. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../generalite/" class="dropdown-item"> 1. Généralités </a>
+</li>
+                                    
+<li>
+    <a href="../theorie/" class="dropdown-item"> 2. Théorie du son </a>
+</li>
+                                    
+<li>
+    <a href="../classification/" class="dropdown-item"> 3. Classification des sons </a>
+</li>
+                                    
+<li>
+    <a href="../parametres/" class="dropdown-item"> 4. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../analyse/" class="dropdown-item"> 5. Analyse du son </a>
+</li>
+                                    
+<li>
+    <a href="../echelles/" class="dropdown-item"> 6. Les échelles musicales </a>
+</li>
+                                    
+<li>
+    <a href="../numerique/" class="dropdown-item"> 7. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../instru/" class="dropdown-item"> 8. Acoustique instrumentale </a>
+</li>
+                                    
+<li>
+    <a href="../voix/" class="dropdown-item"> 9. La voix chantée </a>
+</li>
+                                    
+<li>
+    <a href="../archi/" class="dropdown-item"> 10. Acoustique architecturale </a>
+</li>
+                                    
+<li>
+    <a href="../psycho/" class="dropdown-item"> 11. Psychoacoustique </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../labs/classification/" class="dropdown-item"> 1. Les différents types de sons </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/parametres/" class="dropdown-item"> 2. Les paramètres du son </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/numerique/" class="dropdown-item"> 3. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="../../labs/instru/" class="dropdown-item"> 4. Acoustique instrumentale, architecturale et vocale </a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/inria-emeraude/son" class="nav-link">Code</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../propagation-reception/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../representer-analyser/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#les-parametres-du-son" class="nav-link">Les paramètres du son</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#la-forme-donde" class="nav-link">La forme d’onde</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#frequence-et-hauteur" class="nav-link">Fréquence et hauteur</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#periode-et-frequence" class="nav-link">Période et fréquence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#hauteur-percue" class="nav-link">Hauteur perçue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#amplitude-et-niveau-sonore" class="nav-link">Amplitude et niveau sonore</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lenveloppe-damplitude" class="nav-link">L’enveloppe d’amplitude</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#transitoires-et-timbre" class="nav-link">Transitoires et timbre</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#etude-dun-son-de-guitare" class="nav-link">Étude d’un son de guitare</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#enveloppe" class="nav-link">Enveloppe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#forme-donde" class="nav-link">Forme d’onde</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#spectre" class="nav-link">Spectre</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#sonagramme" class="nav-link">Sonagramme</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#a-retenir" class="nav-link">À retenir</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="les-parametres-du-son">Les paramètres du son</h1>
+<!--
+## Objectifs
+
+- relier période, fréquence et hauteur ;
+- distinguer amplitude physique, niveau sonore et sonie ;
+- comprendre le rôle de l’enveloppe, des transitoires et du spectre ;
+- décrire un son avec un vocabulaire précis.
+-->
+
+<h2 id="la-forme-donde">La forme d’onde</h2>
+<p>Une forme d’onde représente l’évolution de l’amplitude d’un signal au cours du
+temps. À l’échelle de la milliseconde, elle permet d’observer les oscillations
+rapides du signal.</p>
+<figure>
+<img src="../../res/guitWav.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Forme d’onde d’un signal audio.</i></center></figcaption>
+</figure>
+
+<p>La forme d’onde ne permet pas toujours de reconnaître facilement un son. Elle
+donne cependant des informations sur sa périodicité, son amplitude et son
+évolution temporelle.</p>
+<h2 id="frequence-et-hauteur">Fréquence et hauteur</h2>
+<h3 id="periode-et-frequence">Période et fréquence</h3>
+<p>La <strong>période</strong> <script type="math/tex">T</script> est la durée d’un cycle. La <strong>fréquence</strong> <script type="math/tex">f</script> est le
+nombre de cycles par seconde :</p>
+<p>
+<script type="math/tex; mode=display">
+f = \frac{1}{T}
+</script>
+</p>
+<p>La fréquence s’exprime en hertz. Une fréquence de 440 Hz correspond à 440
+oscillations par seconde.</p>
+<!--
+La longueur d’onde \(\lambda\) dépend de la vitesse du son \(c\) :
+
+$$
+\lambda = cT = \frac{c}{f}
+$$
+-->
+
+<figure>
+<img src="../../res/periode.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Une période de 2,27 ms correspond approximativement à 440 Hz.</i></center></figcaption>
+</figure>
+
+<h3 id="hauteur-percue">Hauteur perçue</h3>
+<p>La <strong>fréquence</strong> est une grandeur physique ; la <strong>hauteur</strong> est une sensation.
+Pour un son pur, plus la fréquence augmente, plus le son paraît aigu.</p>
+<p>Pour un son complexe harmonique, la hauteur dépend de l’organisation des
+partiels (voir TODO). La fondamentale peut même être absente du spectre tout en restant
+perçue.</p>
+<p>Le programme suivant permet de comparer un son harmonique avec et sans sa
+fondamentale :</p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+fundamental = hslider("fundamental",300,50,2000,1);
+fundamentalOn = checkbox("fundamental-on");
+nHarmonics = 5;
+process = (os.osc(fundamental)*fundamentalOn +
+    sum(i,nHarmonics,os.osc(fundamental*(i+2))))/nHarmonics;
+-->
+</faust-editor>
+</p>
+
+<blockquote>
+<p><strong>À écouter :</strong> la hauteur change-t-elle lorsque la fondamentale est supprimée ?</p>
+</blockquote>
+<h2 id="amplitude-et-niveau-sonore">Amplitude et niveau sonore</h2>
+<p>L’amplitude d’un signal est liée à l’importance des variations de pression.
+Pour exprimer les niveaux sonores, on utilise le <strong>décibel</strong> (dB), une unité
+logarithmique adaptée aux très grandes différences de pression que l’oreille
+peut recevoir.</p>
+<p>Le niveau de pression acoustique est défini par :</p>
+<p>
+<script type="math/tex; mode=display">
+L_p = 20\log_{10}\left(\frac{P}{P_0}\right)
+</script>
+</p>
+<p>Cette formule est donnée pour comprendre la nature logarithmique du décibel ;
+elle n’a pas besoin d’être mémorisée dans le cadre de ce cours.</p>
+<table>
+<thead>
+<tr>
+<th>Pression acoustique (Pa)</th>
+<th style="text-align: right;">0,00002</th>
+<th style="text-align: right;">0,0002</th>
+<th style="text-align: right;">0,002</th>
+<th style="text-align: right;">0,02</th>
+<th style="text-align: right;">0,2</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">20</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Niveau (dB SPL)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">120</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="../../res/seuils.gif" class="mx-auto d-block" width="100%"><br>
+<img src="../../res/niveaux.png" class="mx-auto d-block" width="70%">
+<figcaption><center><i>Ordres de grandeur de différents niveaux sonores.</i></center></figcaption>
+</figure>
+
+<p>Quelques repères :</p>
+<ul>
+<li>doubler la pression acoustique correspond à environ <strong>+6 dB</strong> ;</li>
+<li>doubler la puissance acoustique (le niveau sonore) correspond à environ <strong>+3 dB</strong> ;</li>
+<li>une augmentation de l’ordre de <strong>10 dB</strong> est souvent perçue comme un
+  doublement approximatif de la sonie (le volume du son perçu) ;</li>
+<li>en champ libre, doubler la distance à une source ponctuelle fait perdre
+  environ <strong>6 dB</strong>.</li>
+</ul>
+<p>Ces règles sont des approximations qui dépendent du contexte d’écoute.</p>
+<h2 id="lenveloppe-damplitude">L’enveloppe d’amplitude</h2>
+<p>À une échelle plus longue, on observe l’<strong>enveloppe</strong>, c’est-à-dire l’évolution
+générale de l’amplitude du son.</p>
+<figure>
+<img src="../../res/enveloppe.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Enveloppe d’un son de violoncelle.</i></center></figcaption>
+</figure>
+
+<p>Une enveloppe est souvent décrite par quatre phases :</p>
+<ul>
+<li><strong>attaque</strong> (<em>attack</em>) ;</li>
+<li><strong>décroissance</strong> (<em>decay</em>) ;</li>
+<li><strong>maintien</strong> (<em>sustain</em>) ;</li>
+<li><strong>extinction</strong> (<em>release</em>).</li>
+</ul>
+<p>Le programme suivant applique une enveloppe ADSR à un son synthétique :</p>
+<p>
+<faust-editor>
+<!--
+import("stdfaust.lib");
+attack = 0.01;
+decay = 0.01;
+sustain = 0.8;
+release = 0.1;
+envelope = button("gate") : en.adsr(attack,decay,sustain,release);
+process = os.sawtooth(440)*envelope : fi.lowpass(3,envelope*10000+500);
+-->
+</faust-editor>
+</p>
+
+<blockquote>
+<p><strong>À écouter :</strong> modifier l’attaque et l’extinction. Le son évoque-t-il le
+même type de geste instrumental ?</p>
+</blockquote>
+<h2 id="transitoires-et-timbre">Transitoires et timbre</h2>
+<p>Les <strong>transitoires</strong> sont les parties rapidement changeantes du son, notamment
+son attaque. Ils jouent un rôle essentiel dans la reconnaissance d’un
+instrument.</p>
+<p>Le <strong>timbre</strong> ne correspond pas à un paramètre unique. Il dépend notamment :</p>
+<ul>
+<li>du spectre ;</li>
+<li>de l’enveloppe ;</li>
+<li>des transitoires ;</li>
+<li>de l’évolution du spectre ;</li>
+<li>des composantes bruitées ou inharmoniques.</li>
+</ul>
+<p>On peut décrire globalement un timbre comme sombre ou brillant selon que
+l’énergie est davantage concentrée dans les graves ou dans les aigus. Cette
+qualité ne doit pas être confondue avec la hauteur de la note.</p>
+<h2 id="etude-dun-son-de-guitare">Étude d’un son de guitare</h2>
+<p><audio controls=""><source src="../../res/guitare.mp3"></audio></p>
+<h3 id="enveloppe">Enveloppe</h3>
+<figure>
+<img src="../../res/guitenv.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Enveloppe d’amplitude d’un son de guitare.</i></center></figcaption>
+</figure>
+
+<h3 id="forme-donde">Forme d’onde</h3>
+<figure>
+<img src="../../res/guitWav2.jpg" class="mx-auto d-block" width="50%">
+<figcaption><center><i>Le même son observé à l’échelle de la milliseconde.</i></center></figcaption>
+</figure>
+
+<h3 id="spectre">Spectre</h3>
+<figure>
+<img src="../../res/guitspectre.gif" class="mx-auto d-block" width="80%">
+<figcaption><center><i>Spectre observé peu après l’attaque.</i></center></figcaption>
+</figure>
+
+<p>Le spectre montre une série de partiels proches de multiples de 440 Hz. Leur
+amplitude n’est pas identique et évolue au cours du son.</p>
+<h3 id="sonagramme">Sonagramme</h3>
+<figure>
+<img src="../../res/guitsonag.gif" class="mx-auto d-block" width="60%">
+<figcaption><center><i>Sonagramme d’un son de guitare.</i></center></figcaption>
+</figure>
+
+<h2 id="a-retenir">À retenir</h2>
+<ul>
+<li>La fréquence est liée à la hauteur et l’amplitude au niveau sonore.</li>
+<li>Le décibel utilise une échelle logarithmique.</li>
+<li>L’enveloppe décrit l’évolution générale de l’amplitude.</li>
+<li>Le spectre, les transitoires et l’enveloppe contribuent au timbre.</li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/@grame/faust-web-component@0.6.1/dist/faust-web-component.js"></script></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
