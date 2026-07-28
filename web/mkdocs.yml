@@ -17,7 +17,6 @@ nav:
         - ' 3. Le son numérique ' : labs/numerique.md
         - ' 4. La voix chantée ' : labs/voix.md
         - ' 5. Acoustique des salles ' : labs/salles.md
-    - Code: "https://github.com/inria-emeraude/son"
     
 theme: 
   name: yeti
