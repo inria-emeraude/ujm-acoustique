@@ -322,7 +322,7 @@ maîtrise des niveaux restent déterminants.
 
 ## Premier soun synthétisé par un ordinateur
 
-Les techniques d'échantillonage ont été formalisée dans les années 1920 et 1930
+Les techniques d'échantillonage ont été formalisées dans les années 1920 et 1930
 mais ce n'est qu'en 1958 qu'elles furent mises en application pour synthétiser
 un son avec un ordinateur par Max Mathews aux Bell Labs (USA). Ce travail a
 permis quelques années plus tard en 1962 de faire « chanter » l'ordinateur
