@@ -1,5 +1,7 @@
 # Lab : Les paramètres du son
 
+Vos réponses doivent-être données en replissant le quizz suivant avec le début de la prochaine séance : <https://forms.gle/KNpmiXod8aDcspGK8>.
+
 ## Période et fréquence d'un son (7 pt)
 
 Le but de cet exercice est de déterminer la période et la fréquence du son suivant : [voix.wav](../res/voix.wav) en utilisant Audacity.

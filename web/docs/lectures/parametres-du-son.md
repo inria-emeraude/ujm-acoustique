@@ -57,7 +57,7 @@ La **fréquence** est une grandeur physique ; la **hauteur** est une sensation.
 Pour un son pur, plus la fréquence augmente, plus le son paraît aigu.
 
 Pour un son complexe harmonique, la hauteur dépend de l’organisation des
-partiels (voir TODO). La fondamentale peut même être absente du spectre tout en restant
+partiels. La fondamentale peut même être absente du spectre tout en restant
 perçue.
 
 Le programme suivant permet de comparer un son harmonique avec et sans sa
