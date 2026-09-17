@@ -1,5 +1,7 @@
 # Lab : Les différents types de son
 
+Vos réponses doivent-être données en replissant le quizz suivant avec le début de la prochaine séance : <https://forms.gle/qeeYSsshBHNJDwem9>.
+
 ## Synthèse d'un son de diapason (8 pt)
 
 Le programme Faust suivant :
@@ -53,7 +55,7 @@ Modifiez le programme ci-dessus pour synthétiser un son de corde pincée à 200
 La figure suivante :
 
 <figure>
-<img src="../res/bell.jpg" class="mx-auto d-block" width="80%">
+<img src="../../res/bell.jpg" class="mx-auto d-block" width="80%">
 </figure>
 
 présente les différents mode de vibration d'une cloche. Les valeurs 1.0, 3.0, 5.4, 7.6, etc. correspondent à des ratios de la fondamentale. Par exemple, si la fondamentale est 100Hz, alors les fréquences des premiers modes seront 100x1.0, 100x3.0, 100x5.4, 100x7.6, etc.
