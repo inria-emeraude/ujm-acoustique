@@ -14,7 +14,7 @@ nav:
     - Labs:
         - ' 1. Les paramètres du son ' : labs/parametres.md
         - ' 2. Les différents types de sons ' : labs/classification.md
-        # - ' 3. Le son numérique ' : labs/numerique.md
+        - ' 3. Le son numérique ' : labs/numerique.md
         # - ' 4. La voix chantée ' : labs/voix.md
         # - ' 5. Acoustique des salles ' : labs/salles.md
     
