@@ -164,7 +164,7 @@ coiffeur :
 ## Précédence et réverbération
 
 Dans une salle, le son direct est suivi de nombreuses réflexions. Lorsque les
-réflexions arrivent peu après le son direct, elles ne sont pas nécessairement
+réflexions arrivent peu de temps après le son direct, elles ne sont pas nécessairement
 perçues comme des sons séparés. C'est l'une des différence entre un echo et
 une réverbération.
 
