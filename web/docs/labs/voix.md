@@ -31,7 +31,9 @@ uDB(i) = ba.take(i+1,(-2.4,-18.7,-15.3,-23));
 vowelFreq = aFreq;
 vowelDB = aDB;
 
-process = os.sawtooth(100) <: 
+vibrato = os.osc(6)*3;
+
+process = os.sawtooth(100 + vibrato) <: 
     par(i,4,fi.resonbp(vowelFreq(i),10,ba.db2linear(vowelDB(i)))) :> _/4
     <: _,_; // stereo
 -->
@@ -40,12 +42,16 @@ process = os.sawtooth(100) <:
 
 Actuellement, la voyelle « a » est prononcée. 
 
+Notez l'importance du vibrato dans la reconnaissance de la voyelle chantée. 
+
 Pour prononcer la voyelle « u », changez les deux lignes suivantes tel que :
 
 ```
 vowelFreq = uFreq;
 vowelDB = uDB;
 ```
+
+puis cliquez sur « run » à nouveau.
 
 Entendez-vous la différence ?
 

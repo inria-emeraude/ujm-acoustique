@@ -74,6 +74,9 @@ liées à la voyelle restent relativement stables.
 
 ## Les voyelles
 
+Les voyelles sont des sons produits par les cordes vocales filtrés par la
+cavité buccale. 
+
 La forme de la langue, l’ouverture de la mâchoire et la position des lèvres
 modifient les résonances du conduit vocal. Les deux premiers formants jouent un
 rôle particulièrement important dans l’identification des voyelles.
@@ -85,6 +88,11 @@ relations générales entre ces formants.
 Les consonnes utilisent également des indices spectraux et temporels :
 explosions brèves, bruits de friction, interruptions ou transitions rapides
 entre formants.
+
+## Les consonnes
+
+Les consonnes sont des sons « fricatifs » produits directement au niveau
+de la cavité buccale. Elles prennent généralement la forme de « bruits filtrés ».
 
 ## Projection et formant du chanteur
 

@@ -17,6 +17,7 @@ nav:
         - ' 3. Le son numérique ' : labs/numerique.md
         # - ' 4. La voix chantée ' : labs/voix.md
         # - ' 5. Acoustique des salles ' : labs/salles.md
+    - Projet: project.md
     
 theme: 
   name: yeti
