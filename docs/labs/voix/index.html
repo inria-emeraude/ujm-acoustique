@@ -8,7 +8,7 @@
         
         <link rel="canonical" href="https://inria-emeraude.github.io/ujm-acoustique/labs/voix/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Lab : Voix chantée - Acoustique @ UJM (L3 Musico)</title>
+        <title> 4. La voix chantée  - Acoustique @ UJM (L3 Musico)</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -77,7 +77,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Labs</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -90,6 +90,10 @@
                                     
 <li>
     <a href="../numerique/" class="dropdown-item"> 3. Le son numérique </a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page"> 4. La voix chantée </a>
 </li>
                                 </ul>
                             </li>
@@ -104,6 +108,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../numerique/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../project/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -142,10 +156,15 @@
 <h1 id="lab-voix-chantee">Lab : Voix chantée</h1>
 <p>La synthèse de la voix chantée est maîtrisée depuis de nombreuses années comme le montre les exemples fournis sur cette page : <a href="http://recherche.ircam.fr/anasyn/peeters/PSOLA/voix2.html">http://recherche.ircam.fr/anasyn/peeters/PSOLA/voix2.html</a></p>
 <p>Le but de ce lab est d'implémenter un synthétiseur vocal en analysant des sons de voix enregistrés. </p>
+<p>Vos réponses doivent-être données en replissant le quizz suivant avec le début de la prochaine séance : <a href="https://forms.gle/Z7aLyd8tvuiH4wucA">https://forms.gle/Z7aLyd8tvuiH4wucA</a></p>
 <h2 id="detection-de-formants-10-pt">Détection de formants (10 pt)</h2>
 <p>Les 5 fichiers audio suivants contiennent l'enregistrement des 5 voyelles prononcées par une voix d'homme : <a href="../../res/a.wav">a.wav</a>, <a href="../../res/e.wav">e.wav</a>, <a href="../../res/i.wav">i.wav</a>, <a href="../../res/o.wav">o.wav</a> et <a href="../../res/u.wav">u.wav</a>.</p>
 <p>Pour chacun d'entre-eux, mesurez la fréquence en le niveau dB des 4 premiers formants en utilisant l'outil <code>Analyze/Plot Spectrum</code> d'Audacity.</p>
-<p>Consignez les valeurs dans un tableau.</p>
+<p>Consignez les valeurs dans un tableau au format markdown du type :</p>
+<pre><code>| Vowel     | Frequency | Level     |
+| --------  | -------   | -------   |
+| a         | TODO Hz   | TODO dB   |
+</code></pre>
 <h2 id="synthetiseur-vocal-10-pt">Synthétiseur vocal (10 pt)</h2>
 <p>Le programme Faust suivant permet de synthétiser des voyelles en utilisant un modèle source/filtre : un oscillateur en dent de scie jour le rôle des cordes vocales et 4 filtre de type passe bande, la cavité buccale. </p>
 <p>

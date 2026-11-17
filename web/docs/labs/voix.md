@@ -4,13 +4,21 @@ La synthèse de la voix chantée est maîtrisée depuis de nombreuses années co
 
 Le but de ce lab est d'implémenter un synthétiseur vocal en analysant des sons de voix enregistrés. 
 
+Vos réponses doivent-être données en replissant le quizz suivant avec le début de la prochaine séance : <https://forms.gle/Z7aLyd8tvuiH4wucA>
+
 ## Détection de formants (10 pt)
 
 Les 5 fichiers audio suivants contiennent l'enregistrement des 5 voyelles prononcées par une voix d'homme : [a.wav](../res/a.wav), [e.wav](../res/e.wav), [i.wav](../res/i.wav), [o.wav](../res/o.wav) et [u.wav](../res/u.wav).
 
 Pour chacun d'entre-eux, mesurez la fréquence en le niveau dB des 4 premiers formants en utilisant l'outil `Analyze/Plot Spectrum` d'Audacity.
 
-Consignez les valeurs dans un tableau.
+Consignez les valeurs dans un tableau au format markdown du type :
+
+```
+| Vowel     | Frequency | Level     |
+| --------  | -------   | -------   |
+| a         | TODO Hz   | TODO dB   |
+```
 
 ## Synthétiseur vocal (10 pt)
 
