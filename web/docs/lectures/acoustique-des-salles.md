@@ -58,6 +58,7 @@ $$
 A = S\alpha
 $$
 
+où \(S\) est la surface du matériau en m² et \(\alpha\) son coefficient d'absorption acoustique. 
 Dans une salle comportant plusieurs matériaux, on additionne leurs
 contributions. L’idée importante est qu’une grande surface peu absorbante peut
 avoir autant d’effet qu’une petite surface très absorbante.
@@ -126,6 +127,15 @@ f_{l,m,n} =
 \left(\frac{n}{Z}\right)^2
 }
 $$
+
+
+où :
+
+- \(f_{l,m,n}\) est la fréquence du mode propre considéré, en Hz ;
+- \(c\) est la célérité du son dans l'air (environ 343 m/s à 20 °C) ;
+- \(X\), \(Y\) et \(Z\) sont les dimensions de la salle (longueur, largeur et hauteur), en mètres ;
+- \(l\), \(m\) et \(n\) sont des entiers positifs ou nuls qui caractérisent le mode propre considéré. Ils ne peuvent pas être tous nuls simultanément.
+
 
 La formule est donnée à titre d’approfondissement. Il faut surtout retenir que :
 
