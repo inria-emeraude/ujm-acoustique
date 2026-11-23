@@ -29,3 +29,12 @@ La présentation sera suivie d'une courte session de questions (5 mins max).
 * Qualité scientifique (12 pt)
 * Qualité des diapositives (4 pt)
 * Clarté du discours (4 pt)
+
+## Dates
+
+Les présentations auront lieu la semaine du 7/12 de la manière suivante :
+
+* 8/12 13h-15h : Augier - Khemmar
+* 9/12 15h30-16h30 : Marien - Vesin
+
+**Tous les étudiants doivent être présents aux 2 séances.**
